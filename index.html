@@ -399,7 +399,7 @@ const SITE = {
   founded: "2024",                    // shown as "around 2024"
   email: "husseinadamz211@gmail.com",
   phone: "+211 924 948 857",
-  address: null,                      // e.g. "Luri Payam, Juba, Central Equatoria State, South Sudan"
+  address: "Luri Payam, Juba, Central Equatoria State, Republic of South Sudan",
   registration: null,                 // Official registration status & number, once confirmed
   socials: [
     { label:"Facebook", url:"https://www.facebook.com/hussein.adamz.2025" },
@@ -409,7 +409,7 @@ const SITE = {
   conceptNoteUrl: null,               // URL to downloadable concept note (PDF)
   annualReportUrl: null,
   safeguardingPolicyUrl: null,
-  contactFormEndpoint: null,          // POST endpoint (e.g. Formspree / own API). null = delivery not configured
+  contactFormEndpoint: "https://formspree.io/f/husseinadamz211@gmail.com", 
   donation: {
     checkoutUrl: null,                // Hosted checkout URL from a regulated provider. null = online giving not live
     currency: "USD",
@@ -897,7 +897,6 @@ pages["/contact"] = (q) => {
   <section class="section"><div class="wrap contact-grid">
     <div class="panel">
       <h2 style="font-size:1.75rem">Send a message</h2>
-      ${SITE.contactFormEndpoint ? "" : `<div class="notice" style="margin:0 0 1.5rem">${icon("info",20,2)}<p><strong>Message delivery is not yet configured.</strong> You can fill in and check the form, but messages will not be sent until the site is connected to an email service.</p></div>`}
       <form class="form" id="contact-form" novalidate>
         <div class="form-row">
           <div class="field"><label for="c-name">Full name <span class="req">(required)</span></label>
@@ -930,7 +929,7 @@ pages["/contact"] = (q) => {
       <dl class="dl">
         <div><dt>${icon("mail",18,2)} Email</dt><dd>${SITE.email ? `<a href="mailto:${esc(SITE.email)}">${esc(SITE.email)}</a>` : phInline("[Email address]")}</dd></div>
         <div><dt>${icon("phone",18,2)} Phone</dt><dd>${SITE.phone ? `<a href="tel:${esc(SITE.phone.replace(/\s/g,""))}">${esc(SITE.phone)}</a>` : phInline("[Phone number]")}</dd></div>
-        <div><dt>${icon("pin",18,2)} Location</dt><dd>${SITE.address ? esc(SITE.address) : `Luri Payam, Juba<br>Central Equatoria State<br>Republic of South Sudan<br>${phInline("[Full postal address, if any]")}`}</dd></div>
+        <div><dt>${icon("pin",18,2)} Location</dt><dd>${esc(SITE.address)}</dd></div>
       </dl>
       <p class="muted" style="margin-top:1.5rem; font-size:.9375rem">Requesting our funding proposal? Choose that topic and tell us a little about your organisation and funding priorities.</p>
     </aside>
