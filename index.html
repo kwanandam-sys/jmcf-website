@@ -1,0 +1,1147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Juba Moslem Care Foundation | Love, Serve and Save Humanity</title>
+<meta name="description" content="Juba Moslem Care Foundation serves vulnerable individuals and families in Luri Payam and Juba, South Sudan, with compassion, humility and selflessness, guided by faith in Allah.">
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+<!-- After going live, add: <meta property="og:image" content="https://YOUR-DOMAIN/assets/share.jpg"> -->
+<meta name="theme-color" content="#11301F">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Juba Moslem Care Foundation">
+<meta property="og:title" content="Juba Moslem Care Foundation | Love, Serve and Save Humanity">
+<meta property="og:description" content="Rooted in faith, driven by compassion, committed to humanity. Serving vulnerable families in Luri Payam and Juba, South Sudan.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Spectral:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+/* ===== Design tokens ===== */
+:root{
+  --forest:#1D4A34; --forest-deep:#11301F; --sage:#A3BFA0; --sage-soft:#E4EDE2; --mist:#F3F7F2; --ink:#142219;
+  --bg:#FFFFFF; --surface:var(--mist); --surface-2:var(--sage-soft); --text:var(--ink); --muted:#475B4E; --line:#D2DDD0;
+  --band:var(--forest-deep); --band-text:#FFFFFF; --band-muted:#C9D9C6; --band-line:rgba(255,255,255,.18);
+  --btn:var(--forest); --btn-text:#FFFFFF; --btn-hover:var(--forest-deep);
+  --link:var(--forest); --focus:#2F7A55; --warn-bg:#FFF7E0; --warn-text:#5C4300; --warn-line:#E6CF8A;
+  --error:#A3261B; --ok:#1D4A34;
+  --serif:"Spectral", Georgia, "Times New Roman", serif;
+  --sans:"Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --r-lg:28px; --r-md:18px; --r-sm:10px;
+  --wrap:1180px; --gutter:clamp(1.15rem, 4vw, 2.5rem);
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0D1A13; --surface:#13251B; --surface-2:#1A3125; --text:#E7EFE8; --muted:#A9BEAE; --line:#28402F;
+    --band:#163526; --band-muted:#BFD3BC; --btn:#A3BFA0; --btn-text:#0D1A13; --btn-hover:#C3D8C0;
+    --link:#B7D2B3; --focus:#B7D2B3; --warn-bg:#2B2410; --warn-text:#F0DFA6; --warn-line:#5E4F22; --error:#FF9C90; --ok:#B7D2B3;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0D1A13; --surface:#13251B; --surface-2:#1A3125; --text:#E7EFE8; --muted:#A9BEAE; --line:#28402F;
+  --band:#163526; --band-muted:#BFD3BC; --btn:#A3BFA0; --btn-text:#0D1A13; --btn-hover:#C3D8C0;
+  --link:#B7D2B3; --focus:#B7D2B3; --warn-bg:#2B2410; --warn-text:#F0DFA6; --warn-line:#5E4F22; --error:#FF9C90; --ok:#B7D2B3;
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:inherit}
+[hidden]{display:none!important}
+[tabindex="-1"]:focus:not(:focus-visible), h1[tabindex="-1"]:focus, h2[tabindex="-1"]:focus, main:focus{outline:none}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 88px); -webkit-text-size-adjust:100%}
+body{margin:0; background:var(--bg); color:var(--text); font-family:var(--sans); font-size:1.0625rem; line-height:1.6; overflow-x:hidden}
+img,svg{max-width:100%; display:block}
+a{color:var(--link); text-underline-offset:.18em}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--focus); outline-offset:3px; border-radius:6px}
+h1,h2,h3{font-family:var(--serif); font-weight:600; line-height:1.12; margin:0 0 .5em; letter-spacing:-.01em}
+h1{font-size:clamp(2.4rem, 6vw, 4.25rem)}
+h2{font-size:clamp(1.85rem, 3.6vw, 2.75rem)}
+h3{font-size:1.35rem; line-height:1.25}
+p{margin:0 0 1em; max-width:66ch}
+.wrap{max-width:var(--wrap); margin:0 auto; padding:0 var(--gutter)}
+.lede{font-size:clamp(1.125rem, 1.6vw, 1.3rem); color:var(--muted); max-width:58ch}
+.visually-hidden{position:absolute!important; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap}
+.skip{position:absolute; left:1rem; top:-100px; z-index:100; background:var(--btn); color:var(--btn-text); padding:.7rem 1rem; border-radius:var(--r-sm); font-weight:600}
+.skip:focus{top:calc(env(safe-area-inset-top,0px) + .75rem)}
+
+/* ===== Buttons ===== */
+.btn{display:inline-flex; align-items:center; justify-content:center; gap:.5rem; min-height:48px; padding:.75rem 1.4rem; border-radius:999px; font:600 1rem/1.2 var(--sans); text-decoration:none; border:2px solid transparent; cursor:pointer; transition:background-color .18s, color .18s, border-color .18s}
+.btn-primary{background:var(--btn); color:var(--btn-text)}
+.btn-primary:hover{background:var(--btn-hover)}
+.btn-ghost{background:transparent; color:var(--text); border-color:var(--line)}
+.btn-ghost:hover{border-color:var(--text)}
+.on-band .btn-primary{background:#FFFFFF; color:var(--forest-deep)}
+.on-band .btn-primary:hover{background:var(--sage-soft)}
+.on-band .btn-ghost{color:#fff; border-color:rgba(255,255,255,.45)}
+.on-band .btn-ghost:hover{border-color:#fff}
+.btn[aria-disabled="true"], .btn:disabled{opacity:.55; cursor:not-allowed}
+.btn-row{display:flex; flex-wrap:wrap; gap:.75rem; margin-top:1.75rem}
+
+/* ===== Placeholder markers ===== */
+.ph{display:inline-block; font:500 .8125rem/1.3 var(--sans); padding:.2rem .6rem; border-radius:999px; background:var(--warn-bg); color:var(--warn-text); border:1px dashed var(--warn-line); vertical-align:middle}
+.ph-inline{background:var(--warn-bg); color:var(--warn-text); border-bottom:1px dashed var(--warn-line); padding:0 .2em; border-radius:3px}
+.notice{display:flex; gap:.75rem; align-items:flex-start; background:var(--warn-bg); color:var(--warn-text); border:1px solid var(--warn-line); border-radius:var(--r-md); padding:1rem 1.15rem; font-size:.9688rem}
+.notice svg{flex:none; margin-top:.15rem}
+.notice p{margin:0; max-width:none}
+
+/* ===== Header ===== */
+.site-header{position:sticky; top:0; z-index:50; background:color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter:saturate(1.4) blur(10px); -webkit-backdrop-filter:saturate(1.4) blur(10px); border-bottom:1px solid var(--line); padding-top:env(safe-area-inset-top,0px); margin-top:calc(-1 * env(safe-area-inset-top,0px))}
+.header-inner{display:flex; align-items:center; gap:1rem; min-height:76px}
+.brand{display:flex; align-items:center; gap:.75rem; text-decoration:none; color:var(--text); margin-right:auto; min-width:0}
+.logo-ph{flex:none; width:46px; height:46px; border-radius:50%; border:2px dashed var(--sage); display:grid; place-items:center; color:var(--forest); background:var(--surface)}
+:root[data-theme="dark"] .logo-ph{color:var(--sage)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .logo-ph{color:var(--sage)}}
+.brand-name{display:block; font:600 1.125rem/1.15 var(--serif); white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+.logo{flex:none; width:52px; height:52px; border-radius:50%; overflow:hidden; background:#fff; box-shadow:0 0 0 1px var(--line)}
+.logo img{width:100%; height:100%}
+.footer-logo{width:88px; height:88px; border-radius:50%; background:#fff; margin-bottom:1rem}
+.video-grid{display:grid; gap:1.5rem}
+@media (min-width: 800px){ .video-grid{grid-template-columns:1fr 1fr} }
+.video-card{margin:0; background:var(--surface); border:1px solid var(--line); border-radius:var(--r-md); overflow:hidden}
+.video-frame{background:#0A1610; aspect-ratio:16/9; display:grid; place-items:center}
+.video-frame video{width:100%; height:100%; object-fit:contain; background:#0A1610}
+.video-fallback{color:#DCE8DA; padding:1rem; text-align:center; margin:0}
+.video-fallback a{color:#fff}
+.video-card figcaption{padding:1.25rem 1.35rem 1.4rem}
+.video-card h3{margin-bottom:.35rem}
+.video-card figcaption p{color:var(--muted); font-size:.9688rem}
+.brand-sub{display:block; font:500 .78rem/1.2 var(--sans); color:var(--muted)}
+.nav-list{display:flex; gap:.25rem; list-style:none; margin:0; padding:0}
+.nav-list a{display:block; padding:.6rem .8rem; border-radius:999px; color:var(--text); text-decoration:none; font-weight:500; font-size:.9688rem}
+.nav-list a:hover{background:var(--surface)}
+.nav-list a[aria-current="page"]{background:var(--surface-2); font-weight:600}
+.menu-btn{display:none; align-items:center; gap:.45rem; min-height:44px; padding:.5rem .9rem; border-radius:999px; border:1px solid var(--line); background:transparent; color:var(--text); font:600 .9375rem var(--sans); cursor:pointer}
+@media (max-width: 980px){
+  .menu-btn{display:inline-flex}
+  .site-nav{position:absolute; left:0; right:0; top:100%; background:var(--bg); border-bottom:1px solid var(--line); padding:.75rem var(--gutter) 1.25rem; display:none; box-shadow:0 18px 30px -18px rgba(17,48,31,.35)}
+  .site-nav.open{display:block}
+  .nav-list{flex-direction:column}
+  .nav-list a{padding:.85rem 1rem; font-size:1.0625rem}
+  .header-donate{padding-inline:1.1rem}
+}
+@media (max-width: 520px){ .brand-name{white-space:normal; font-size:.98rem; line-height:1.15} .brand-sub{display:none} .logo{width:44px; height:44px} }
+@media (max-width: 420px){ .brand-sub{display:none} .brand-name{font-size:.95rem} .menu-label{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0)} .menu-btn{padding:.5rem .75rem} .header-inner{gap:.6rem} .logo-ph{width:40px; height:40px} }
+
+/* ===== Sections ===== */
+.section{padding:clamp(4rem, 9vw, 7rem) 0}
+.section-tight{padding:clamp(3rem, 6vw, 4.5rem) 0}
+.section-alt{background:var(--surface)}
+.band{background:var(--band); color:var(--band-text)}
+.band p, .band .lede{color:var(--band-muted)}
+.band a:not(.btn){color:#fff}
+.sec-head{display:grid; gap:1rem 3rem; margin-bottom:clamp(2rem, 4vw, 3.25rem)}
+@media (min-width: 900px){ .sec-head.split{grid-template-columns:1fr 1fr; align-items:end} .sec-head.split p{margin-bottom:.35rem} }
+.kicker{font:500 1rem/1.3 var(--sans); color:var(--muted); margin-bottom:.65rem}
+.band .kicker{color:var(--sage)}
+
+/* ===== Hero ===== */
+.hero{background:var(--band); color:#fff; padding:clamp(2.5rem, 6vw, 4.5rem) 0 clamp(3rem, 7vw, 5.5rem); position:relative; overflow:hidden}
+.hero-grid{display:grid; gap:2.5rem; align-items:center}
+@media (min-width: 900px){ .hero-grid{grid-template-columns:1.02fr 1fr; gap:4rem} }
+.hero h1{color:#fff; max-width:14ch; font-size:clamp(2.6rem, 6.4vw, 4.6rem)}
+.hero .lede{color:var(--band-muted); font-size:clamp(1.125rem, 1.7vw, 1.3rem)}
+.hero-place{display:flex; flex-wrap:wrap; gap:.5rem; margin:0 0 1.5rem; padding:0; list-style:none}
+.hero-place li{font:500 .875rem/1 var(--sans); padding:.5rem .8rem; border-radius:999px; background:rgba(255,255,255,.08); border:1px solid var(--band-line); color:#E7F0E5}
+.hero .photo{border-radius:var(--r-lg) var(--r-lg) var(--r-lg) 8px}
+@media (prefers-reduced-motion: no-preference){
+  .hero-reveal > *{opacity:0; transform:translateY(14px); animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards}
+  .hero-reveal > *:nth-child(2){animation-delay:.08s} .hero-reveal > *:nth-child(3){animation-delay:.16s} .hero-reveal > *:nth-child(4){animation-delay:.24s}
+  .hero-photo-reveal{opacity:0; animation:fade .9s .2s ease forwards}
+  @keyframes rise{to{opacity:1; transform:none}}
+  @keyframes fade{to{opacity:1}}
+}
+
+/* ===== Page hero (inner pages) ===== */
+.page-hero{background:var(--surface); padding:clamp(3rem, 7vw, 5rem) 0 clamp(2.5rem, 5vw, 3.5rem); border-bottom:1px solid var(--line)}
+.page-hero h1{max-width:24ch; font-size:clamp(2.3rem, 5.4vw, 3.6rem)}
+.crumbs{font-size:.9rem; color:var(--muted); margin-bottom:1rem}
+.crumbs a{color:var(--muted)}
+
+/* ===== Photo component ===== */
+.photo{position:relative; margin:0; border-radius:var(--r-md); overflow:hidden; background:var(--surface-2)}
+.photo img{width:100%; height:100%; object-fit:cover}
+.photo-ph{position:relative; width:100%; height:100%; display:flex; flex-direction:column; justify-content:flex-end; padding:1.1rem; color:var(--forest-deep);
+  background:
+   radial-gradient(120% 90% at 85% 10%, rgba(255,255,255,.55), transparent 55%),
+   repeating-linear-gradient(135deg, rgba(29,74,52,.06) 0 2px, transparent 2px 14px),
+   linear-gradient(160deg, #CFDFCB, #9FBC9B)}
+.photo-ph .ph-icon{position:absolute; top:1rem; left:1rem; opacity:.55}
+.photo-ph strong{display:block; font:600 .9375rem/1.3 var(--sans)}
+.photo-ph span{display:block; font-size:.84rem; line-height:1.4; opacity:.85; max-width:40ch}
+.photo-ph .ph{align-self:flex-start; margin-bottom:.6rem}
+.ratio-hero{aspect-ratio:4/4.4} .ratio-wide{aspect-ratio:16/10} .ratio-portrait{aspect-ratio:4/5} .ratio-square{aspect-ratio:1/1}
+@media (max-width: 899px){ .ratio-hero{aspect-ratio:4/3.3} }
+
+/* ===== About ===== */
+.two-col{display:grid; gap:2.5rem; align-items:center}
+@media (min-width: 900px){ .two-col{grid-template-columns:1fr 1fr; gap:4.5rem} .two-col.flip > :first-child{order:2} }
+.pillars{display:grid; gap:1.25rem; margin-top:2rem; padding:0; list-style:none}
+.pillars li{padding-left:1.25rem; border-left:3px solid var(--sage)}
+.values-grid{margin-top:0; gap:2rem 2.5rem; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr))}
+.founder{align-items:start}
+.founder-quote{margin:0; padding:clamp(1.5rem,3vw,2.25rem); border-radius:var(--r-lg); background:var(--surface); border-left:4px solid var(--sage)}
+.founder-quote blockquote{margin:0; font:500 1.1875rem/1.6 var(--serif); font-style:italic}
+.founder-quote blockquote p{max-width:60ch}
+.founder-quote figcaption{margin-top:1rem; font-weight:600}
+.statement-lead{font-size:clamp(2rem, 4.2vw, 3.1rem); max-width:20ch; margin-bottom:1rem}
+.pillars strong{display:block; font-family:var(--serif); font-size:1.15rem; font-weight:600; margin-bottom:.15rem}
+.pillars p{margin:0; color:var(--muted)}
+
+/* ===== Impact ===== */
+.impact-grid{display:grid; grid-template-columns:1fr; border-top:1px solid var(--band-line); border-left:1px solid var(--band-line)}
+@media (min-width: 560px){ .impact-grid{grid-template-columns:repeat(2,1fr)} }
+@media (min-width: 900px){ .impact-grid{grid-template-columns:repeat(3,1fr)} }
+.impact-cell{padding:1.75rem 1.5rem 1.6rem; border-right:1px solid var(--band-line); border-bottom:1px solid var(--band-line); min-height:190px; display:flex; flex-direction:column; justify-content:space-between; gap:1.25rem}
+.impact-value{font:600 clamp(2.4rem, 4.5vw, 3.25rem)/1 var(--serif); color:#fff}
+.impact-await{display:inline-flex; align-items:center; min-height:3.25rem; font:500 .9375rem/1.3 var(--sans); color:#F4E7B9; border:1.5px dashed rgba(244,231,185,.55); border-radius:var(--r-sm); padding:.55rem .8rem}
+.impact-label{font-weight:600; color:#fff; margin:0; font-size:1.0625rem; line-height:1.35}
+.impact-note{font-size:.875rem; color:var(--band-muted); margin:.25rem 0 0}
+.impact-light .impact-grid{border-color:var(--line)}
+.impact-light .impact-cell{border-color:var(--line); background:var(--bg)}
+.impact-light .impact-value, .impact-light .impact-label{color:var(--text)}
+.impact-light .impact-note{color:var(--muted)}
+.impact-light .impact-await{color:var(--warn-text); background:var(--warn-bg); border-color:var(--warn-line)}
+
+/* ===== Focus areas ===== */
+.focus-grid{display:grid; gap:1rem; grid-template-columns:1fr}
+@media (min-width: 640px){ .focus-grid{grid-template-columns:repeat(2,1fr)} .focus-grid > .feature{grid-column:span 2} }
+@media (min-width: 1000px){ .focus-grid{grid-template-columns:1.15fr 1fr 1fr} .focus-grid > .feature{grid-column:auto; grid-row:span 2; justify-content:flex-end; padding:2rem 1.85rem} .focus-grid > .feature h3{font-size:1.75rem} .focus-grid > .feature p{font-size:1.0625rem} }
+.focus-card{background:var(--bg); border:1px solid var(--line); border-radius:var(--r-md); padding:1.6rem 1.5rem 1.5rem; display:flex; flex-direction:column}
+.section-alt .focus-card{background:var(--bg)}
+.focus-icon{width:52px; height:52px; border-radius:16px; display:grid; place-items:center; background:var(--surface-2); color:var(--forest); margin-bottom:1.15rem}
+:root[data-theme="dark"] .focus-icon{color:var(--sage)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .focus-icon{color:var(--sage)}}
+.focus-card h3{margin-bottom:.4rem}
+.focus-card p{color:var(--muted); margin:0; font-size:1rem}
+.focus-card ul{margin:.9rem 0 0; padding-left:1.1rem; color:var(--muted); font-size:.9688rem}
+.focus-card li{margin-bottom:.25rem}
+.focus-card.feature{background:var(--band); color:#fff; border-color:transparent}
+.focus-card.feature p, .focus-card.feature ul{color:var(--band-muted)}
+.focus-card.feature .focus-icon{background:rgba(255,255,255,.1); color:#fff}
+
+/* ===== Map ===== */
+.map-grid{display:grid; gap:2.5rem; align-items:center}
+@media (min-width: 960px){ .map-grid{grid-template-columns:.85fr 1.15fr; gap:4rem} }
+.loc-path{list-style:none; margin:1.75rem 0 0; padding:0; display:grid; gap:0}
+.loc-path li{display:grid; grid-template-columns:28px 1fr; gap:.85rem; align-items:start; padding-bottom:1.15rem; position:relative}
+.loc-path li::before{content:""; position:absolute; left:13px; top:22px; bottom:0; width:2px; background:var(--band-line)}
+.loc-path li:last-child::before{display:none}
+.loc-dot{width:28px; height:28px; border-radius:50%; border:2px solid var(--sage); display:grid; place-items:center; background:var(--band); position:relative; z-index:1}
+.loc-dot::after{content:""; width:10px; height:10px; border-radius:50%; background:var(--sage)}
+.loc-path li:last-child .loc-dot{background:var(--sage)} .loc-path li:last-child .loc-dot::after{background:var(--forest-deep)}
+.loc-path strong{display:block; color:#fff; font-size:1.0625rem}
+.loc-path span{color:var(--band-muted); font-size:.9375rem}
+.map-card{background:rgba(255,255,255,.04); border:1px solid var(--band-line); border-radius:var(--r-lg); padding:clamp(1rem, 2.5vw, 1.75rem)}
+.map-card figcaption{font-size:.84rem; color:var(--band-muted); margin-top:.9rem; line-height:1.45}
+.map-svg text{font-family:var(--sans)}
+.map-wrap{display:grid; gap:1rem}
+.inset{display:grid; gap:.5rem 1.25rem; align-items:center}
+@media (min-width: 520px){ .inset{grid-template-columns:200px 1fr} }
+.inset p{color:var(--band-muted); font-size:.9rem; margin:0}
+.inset{background:rgba(255,255,255,.05); border-radius:var(--r-md); padding:.75rem; border:1px solid var(--band-line)}
+.inset h3{font:600 .9rem/1.3 var(--sans); color:#fff; margin:0 0 .4rem}
+
+/* ===== Stories ===== */
+.stories{display:grid; gap:1.25rem; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr))}
+.story{display:flex; flex-direction:column; background:var(--bg); border-radius:var(--r-md); border:1px solid var(--line); overflow:hidden}
+.story .photo{border-radius:0}
+.story-body{padding:1.35rem 1.4rem 1.5rem; display:flex; flex-direction:column; gap:.6rem; flex:1}
+.story blockquote{margin:0; font:500 1.1875rem/1.45 var(--serif); font-style:italic}
+.story-meta{font-size:.9rem; color:var(--muted); margin:0}
+.consent{margin-top:2rem; font-size:.9375rem; color:var(--muted); max-width:70ch}
+
+/* ===== CTA ===== */
+.cta-band{border-radius:var(--r-lg); background:var(--band); color:#fff; padding:clamp(2rem, 5vw, 3.5rem); display:grid; gap:2rem}
+@media (min-width: 900px){ .cta-band{grid-template-columns:1.1fr 1fr; align-items:center} }
+.cta-band h2{color:#fff}
+.cta-options{display:grid; gap:.75rem; list-style:none; margin:0; padding:0}
+.cta-options a{display:grid; grid-template-columns:1fr auto; gap:.25rem 1rem; align-items:center; padding:1.1rem 1.25rem; border-radius:var(--r-md); background:rgba(255,255,255,.07); border:1px solid var(--band-line); color:#fff; text-decoration:none; transition:background-color .18s}
+.cta-options a:hover{background:rgba(255,255,255,.14)}
+.cta-options strong{font-size:1.0625rem}
+.cta-options span{grid-column:1; font-size:.9rem; color:var(--band-muted)}
+.cta-options svg{grid-row:1 / span 2; grid-column:2}
+
+/* ===== Timeline / steps ===== */
+.steps{counter-reset:s; list-style:none; margin:0; padding:0; display:grid; gap:1rem; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr))}
+.steps li{counter-increment:s; padding:1.4rem 1.35rem; border-radius:var(--r-md); background:var(--bg); border:1px solid var(--line)}
+.steps li::before{content:counter(s); display:grid; place-items:center; width:36px; height:36px; border-radius:50%; background:var(--surface-2); font:600 1rem var(--serif); margin-bottom:.9rem}
+.steps h3{font-size:1.15rem; margin-bottom:.3rem}
+.steps p{margin:0; color:var(--muted); font-size:.9688rem}
+.timeline{list-style:none; margin:0; padding:0; border-left:2px solid var(--line); display:grid; gap:2rem}
+.timeline li{padding-left:1.5rem; position:relative}
+.timeline li::before{content:""; position:absolute; left:-8px; top:.45rem; width:14px; height:14px; border-radius:50%; background:var(--bg); border:3px solid var(--forest)}
+.timeline h3{margin-bottom:.35rem}
+.timeline p{color:var(--muted); margin:0}
+
+/* ===== Info cards / lists ===== */
+.info-grid{display:grid; gap:1rem; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr))}
+.info{border:1px solid var(--line); border-radius:var(--r-md); padding:1.5rem; background:var(--bg)}
+.info h3{margin-bottom:.4rem}
+.info p{color:var(--muted); margin-bottom:.9rem}
+.info p:last-child{margin-bottom:0}
+.dl{display:grid; gap:0; margin:0}
+.dl > div{display:grid; gap:.25rem 1.5rem; padding:1rem 0; border-bottom:1px solid var(--line)}
+@media (min-width: 640px){ .dl > div{grid-template-columns:220px 1fr} }
+.dl dt{font-weight:600} .dl dd{margin:0; color:var(--muted)}
+
+/* ===== Forms ===== */
+.form{display:grid; gap:1.25rem}
+.field{display:grid; gap:.4rem}
+.field label, .field legend{font-weight:600; font-size:.9688rem}
+.field .hint{font-size:.875rem; color:var(--muted); margin:0}
+.req{color:var(--muted); font-weight:500}
+input[type=text], input[type=email], input[type=tel], input[type=number], select, textarea{width:100%; font:400 1rem/1.4 var(--sans); color:var(--text); background:var(--bg); border:1.5px solid var(--line); border-radius:var(--r-sm); padding:.8rem .9rem; min-height:48px}
+textarea{min-height:150px; resize:vertical}
+input:hover, select:hover, textarea:hover{border-color:var(--muted)}
+input:focus-visible, select:focus-visible, textarea:focus-visible{outline:3px solid var(--focus); outline-offset:1px; border-color:var(--focus)}
+[aria-invalid="true"]{border-color:var(--error)!important}
+.err{color:var(--error); font-size:.9rem; font-weight:500; margin:0; display:none}
+.err.show{display:block}
+.check{display:flex; gap:.7rem; align-items:flex-start}
+.check input{width:22px; height:22px; margin:.15rem 0 0; accent-color:var(--forest); flex:none}
+.check label{font-weight:400}
+.form-row{display:grid; gap:1.25rem}
+@media (min-width: 640px){ .form-row{grid-template-columns:1fr 1fr} }
+.status{border-radius:var(--r-md); padding:1rem 1.15rem; display:none}
+.status.show{display:block}
+.status.ok{background:var(--surface-2); border:1px solid var(--line)}
+.status.pending{background:var(--warn-bg); color:var(--warn-text); border:1px solid var(--warn-line)}
+.status.bad{border:1.5px solid var(--error); color:var(--error)}
+.status p{margin:.25rem 0 0; max-width:none}
+fieldset{border:0; padding:0; margin:0; min-width:0}
+.choice-row{display:flex; flex-wrap:wrap; gap:.6rem; margin-top:.4rem}
+.choice{position:relative}
+.choice input{position:absolute; opacity:0; inset:0; width:100%; height:100%; margin:0; cursor:pointer}
+.choice span{display:inline-flex; align-items:center; min-height:48px; padding:.6rem 1.15rem; border-radius:999px; border:1.5px solid var(--line); font-weight:600; background:var(--bg)}
+.choice input:checked + span{background:var(--btn); color:var(--btn-text); border-color:var(--btn)}
+.choice input:focus-visible + span{outline:3px solid var(--focus); outline-offset:2px}
+.panel{background:var(--surface); border-radius:var(--r-lg); padding:clamp(1.4rem, 3.5vw, 2.5rem); border:1px solid var(--line)}
+.contact-grid{display:grid; gap:2.5rem}
+@media (min-width: 900px){ .contact-grid{grid-template-columns:1.35fr 1fr; gap:3.5rem} }
+.summary-box{margin-top:.5rem; padding:1rem 1.15rem; background:var(--bg); border-radius:var(--r-md); border:1px solid var(--line)}
+.summary-box p{margin:0; max-width:none}
+
+/* ===== Footer ===== */
+.site-footer{background:var(--forest-deep); color:#DCE8DA; padding:clamp(3.5rem, 7vw, 5rem) 0 2rem; margin-top:0}
+:root[data-theme="dark"] .site-footer{background:#08130D}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .site-footer{background:#08130D}}
+.site-footer a{color:#fff}
+.footer-grid{display:grid; gap:2.25rem; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr))}
+.site-footer h2{font:600 1rem/1.3 var(--sans); color:#fff; margin-bottom:.9rem}
+.site-footer ul{list-style:none; margin:0; padding:0; display:grid; gap:.55rem}
+.site-footer p{color:#C2D4BF; font-size:.9688rem}
+.footer-brand .brand-name{color:#fff; font-size:1.3rem; white-space:normal; overflow:visible}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.14); margin-top:3rem; padding-top:1.5rem; display:flex; flex-wrap:wrap; gap:.75rem 2rem; justify-content:space-between; font-size:.875rem; color:#AFC4AC}
+.site-footer .ph{background:rgba(244,231,185,.12); color:#F4E7B9; border-color:rgba(244,231,185,.4)}
+
+.mt-0{margin-top:0} .mb-0{margin-bottom:0} .muted{color:var(--muted)}
+.stack > * + *{margin-top:1rem}
+.not-found{min-height:50vh; display:grid; align-content:center}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="#/" aria-label="Home">
+      <span class="logo-ph" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21V10"/><path d="M12 10c0-4 3-6.5 7.5-6.5 0 4.5-3 6.5-7.5 6.5z"/><path d="M12 13c0-3.2-2.3-5-6.5-5 0 3.4 2.3 5 6.5 5z"/></svg>
+      </span>
+      <span style="min-width:0">
+        <span class="brand-name" data-org-name></span>
+        <span class="brand-sub">Love, Serve and Save Humanity</span>
+      </span>
+    </a>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul class="nav-list" id="nav-list"></ul>
+    </nav>
+    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="site-nav">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <span class="menu-label">Menu</span>
+    </button>
+    <a class="btn btn-primary header-donate" href="#/donate">Donate</a>
+  </div>
+</header>
+
+<main id="main" tabindex="-1"></main>
+
+<footer class="site-footer" id="footer"></footer>
+
+<div class="visually-hidden" aria-live="polite" id="route-announcer"></div>
+
+<script id="media-data">
+/* Media files live in /assets. Replace a file (same name) or change a path here. */
+window.MEDIA = {
+  "logo": "assets/logo.webp",
+  "hero": "assets/hero.webp",
+  "women": "assets/women.webp",
+  "meal": "assets/meal.webp",
+  "water_poster": "assets/water_poster.webp",
+  "meat_poster": "assets/meat_poster.webp",
+  "water": "assets/water.mp4",
+  "meat": "assets/meat.mp4"
+};
+</script>
+<script>
+/* =====================================================================
+   SITE CONTENT & SETTINGS
+   Edit this block to supply real details. Anything left as null renders
+   as a clearly labelled placeholder on the site.
+   ===================================================================== */
+const SITE = {
+  name: "Juba Moslem Care Foundation",
+  tagline: "Love, Serve and Save Humanity",
+  logo: MEDIA.logo,
+  founded: "2024",                    // shown as "around 2024"
+  email: "husseinadamz211@gmail.com",
+  phone: "+211 924 948 857",
+  address: null,                      // e.g. "Luri Payam, Juba, Central Equatoria State, South Sudan"
+  registration: null,                 // Official registration status & number, once confirmed
+  socials: [
+    { label:"Facebook", url:"https://www.facebook.com/hussein.adamz.2025" },
+    { label:"Instagram", url:"https://instagram.com/jubamuslimcarefoudation" },
+    { label:"Threads", url:"https://www.threads.com/@jubamuslimcarefoudation" },
+  ],
+  conceptNoteUrl: null,               // URL to downloadable concept note (PDF)
+  annualReportUrl: null,
+  safeguardingPolicyUrl: null,
+  contactFormEndpoint: null,          // POST endpoint (e.g. Formspree / own API). null = delivery not configured
+  donation: {
+    checkoutUrl: null,                // Hosted checkout URL from a regulated provider. null = online giving not live
+    currency: "USD",
+    presets: [25, 50, 100, 250],
+  },
+  // Photos: supply consented images (ideally WebP/JPEG, ~1600px wide for hero, ~900px for cards).
+  photos: {
+    hero:  { src:MEDIA.hero, w:715, h:715, pos:"50% 40%", alt:"A smiling woman sits with a group of children outside a mud-walled home. Food supplies, including rice, maize flour, sugar, bread and cooking oil, are laid out on a mat in front of them." },
+    about: { src:MEDIA.women, w:725, h:408, pos:"50% 50%", alt:"A large group of women in colourful headscarves sit together on the ground beside a maize field, each holding items they have received." },
+    work:  { src:MEDIA.meal, w:1024, h:576, pos:"50% 50%", alt:"Children sit on tarpaulins beside long rows of plates set with watermelon, bread, bananas, water and juice, ready for a shared meal." },
+    involved:{ src:MEDIA.hero, w:715, h:715, pos:"50% 35%", alt:"A smiling woman sits with children outside a mud-walled home with food supplies laid out in front of them." },
+  },
+  videos: [
+    { src:MEDIA.water, poster:MEDIA.water_poster, w:640, h:360, title:"Collecting water at a community hand pump",
+      text:"Residents fill jerrycans and bottles at a hand pump while dozens of containers wait in line, a daily reality that shapes our health and WASH work.", context:"[Add location and date]" },
+    { src:MEDIA.meat, poster:MEDIA.meat_poster, w:640, h:360, title:"Meat distribution to families",
+      text:"Volunteers prepare and share out meat to families gathered under the trees.", context:"[Confirm: Qurbani / Eid al-Adha distribution, with location and date]" },
+  ],
+  impact: [
+    { label:"Households supported", value:null, note:"Across Luri Payam and Juba since founding" },
+    { label:"Children reached through education support", value:null, note:"School materials, fees or learning support" },
+    { label:"People reached with health and WASH activities", value:null, note:"Water, sanitation, hygiene and health outreach" },
+    { label:"Emergency relief distributions", value:null, note:"Food, shelter or essential items in crises" },
+    { label:"Active community volunteers", value:null, note:"Residents contributing time and skills" },
+    { label:"Years serving the community", value:null, note:"Since the initiative began" },
+  ],
+  stories: [
+    { sample:true, quote:"Replace this with a short quote, in the person's own words, about how the initiative's support affected their family or community.", name:"First name or pseudonym", place:"Luri Payam", area:"Food security and livelihoods" },
+    { sample:true, quote:"Replace with a second consented story. Keep it specific and factual, and avoid details that could identify or endanger the person.", name:"First name or pseudonym", place:"Juba", area:"Education" },
+    { sample:true, quote:"Replace with a story from a volunteer or community leader describing how residents organise and decide on priorities together.", name:"Volunteer or community leader", place:"Central Equatoria State", area:"Protection and community support" },
+  ],
+};
+
+/* ===================================================================== */
+const NAV = [
+  { path:"/about", label:"About us" },
+  { path:"/our-work", label:"Our work" },
+  { path:"/our-impact", label:"Our impact" },
+  { path:"/get-involved", label:"Get involved" },
+  { path:"/contact", label:"Contact" },
+];
+
+const ICONS = {
+  food:'<path d="M12 21V11"/><path d="M12 11c0-4 3-6.5 7.5-6.5 0 4.5-3 6.5-7.5 6.5z"/><path d="M12 14c0-3.2-2.3-5-6.5-5 0 3.4 2.3 5 6.5 5z"/><path d="M5 21h14"/>',
+  education:'<path d="M3 5.5h6a3 3 0 0 1 3 3V20a2.2 2.2 0 0 0-2.2-2.2H3z"/><path d="M21 5.5h-6a3 3 0 0 0-3 3V20a2.2 2.2 0 0 1 2.2-2.2H21z"/>',
+  health:'<path d="M12 3s6 6.4 6 11a6 6 0 0 1-12 0c0-4.6 6-11 6-11z"/><path d="M12 11.5v5M9.5 14h5"/>',
+  protection:'<path d="M12 3l7 3v5.2c0 4.8-3 8.3-7 9.8-4-1.5-7-5-7-9.8V6z"/><path d="M9 12l2 2 4-4"/>',
+  emergency:'<path d="M3 20h18"/><path d="M12 4L4.5 20M12 4l7.5 16"/><path d="M12 12.5L9.8 20M12 12.5l2.2 7.5"/>',
+  arrowOut:'<path d="M7 17L17 7M9 7h8v8"/>',
+  info:'<circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/>',
+  camera:'<path d="M4 8h3l2-2.5h6L17 8h3v11H4z"/><circle cx="12" cy="13.5" r="3.5"/>',
+  mail:'<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5L12 13l8.5-6.5"/>',
+  phone:'<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/>',
+  pin:'<path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/>',
+  doc:'<path d="M14 3H6v18h12V7z"/><path d="M14 3v4h4M9 12h6M9 16h6"/>',
+};
+const icon = (name, size=24, sw=1.7) => `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="${sw}" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[name]}</svg>`;
+
+const FOCUS = [
+  { id:"food", title:"Food security and livelihoods", summary:"Helping households grow, earn and eat more reliably through farming support and small livelihood activities.",
+    examples:["Seeds, tools and farming know-how","Savings groups and small enterprise","Support during the hunger season"] },
+  { id:"education", title:"Education", summary:"Keeping children learning, with attention to girls and children from the most vulnerable households.",
+    examples:["School materials and fee support","Community learning spaces","Encouraging enrolment and attendance"] },
+  { id:"health", title:"Health and WASH", summary:"Safer water, sanitation and hygiene, and connecting families with basic health services.",
+    examples:["Water point repair and protection","Hygiene promotion","Referral to health facilities"] },
+  { id:"protection", title:"Protection and community support", summary:"Standing with widows, orphans, older people and others at risk, and strengthening how neighbours look after one another.",
+    examples:["Support for vulnerable households","Community dialogue and peacebuilding","Psychosocial and practical support"] },
+  { id:"emergency", title:"Emergency relief", summary:"Responding quickly when floods, displacement or other shocks hit families in our area.",
+    examples:["Food, clothing and essential item distributions","Shelter support","Coordination with local authorities"] },
+];
+
+/* ===== Helpers ===== */
+const $ = (s, el=document) => el.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const ph = text => `<span class="ph">${esc(text)}</span>`;
+const phInline = text => `<span class="ph-inline">${esc(text)}</span>`;
+const orNull = (v, label) => v ? esc(v) : phInline(label);
+const btn = (label, href, variant="primary", attrs="") => `<a class="btn btn-${variant}" href="${href}" ${attrs}>${esc(label)}</a>`;
+
+/* ===== Components ===== */
+function Photo(slot, ratio="ratio-wide", extraClass="", eager=false){
+  const p = SITE.photos[slot] || {};
+  if (p.src){
+    return `<figure class="photo ${ratio} ${extraClass}"><img src="${p.src}" alt="${esc(p.alt)}" ${eager ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async" width="${p.w||1600}" height="${p.h||1000}" style="object-position:${p.pos||"50% 50%"}"></figure>`;
+  }
+  return `<figure class="photo ${ratio} ${extraClass}" role="img" aria-label="Photo placeholder: ${esc(p.need)}. ${esc(p.brief)}">
+    <div class="photo-ph"><span class="ph-icon">${icon("camera", 30, 1.5)}</span>
+      <span class="ph" aria-hidden="true">Photo to be supplied</span>
+      <strong aria-hidden="true">${esc(p.need)}</strong><span aria-hidden="true">${esc(p.brief)}</span>
+    </div></figure>`;
+}
+
+function SectionHead({kicker, title, intro, split=false, level=2, id}){
+  return `<div class="sec-head ${split ? "split" : ""}">
+    <div>${kicker ? `<p class="kicker">${esc(kicker)}</p>` : ""}<h${level} ${id ? `id="${id}"` : ""} class="mb-0">${title}</h${level}></div>
+    ${intro ? `<p class="lede">${intro}</p>` : ""}
+  </div>`;
+}
+
+function PageHero(title, intro, crumb){
+  return `<section class="page-hero"><div class="wrap">
+    <p class="crumbs"><a href="#/">Home</a> <span aria-hidden="true">/</span> <span aria-current="page">${esc(crumb)}</span></p>
+    <h1 tabindex="-1">${title}</h1><p class="lede mb-0">${intro}</p>
+  </div></section>`;
+}
+
+function ImpactGrid(light=false){
+  const cells = SITE.impact.map(m => `<div class="impact-cell">
+      ${m.value ? `<div class="impact-value">${esc(m.value)}</div>` : `<div><span class="impact-await">Awaiting verified figure</span></div>`}
+      <div><p class="impact-label">${esc(m.label)}</p><p class="impact-note">${esc(m.note)}</p></div>
+    </div>`).join("");
+  return `<div class="${light ? "impact-light" : ""}"><div class="impact-grid" role="list">${cells.replace(/class="impact-cell"/g,'class="impact-cell" role="listitem"')}</div></div>`;
+}
+
+function FocusGrid(detailed=false){
+  return `<div class="focus-grid">${FOCUS.map((f,i) => `<article class="focus-card ${i===0 ? "feature" : ""}" id="focus-${f.id}">
+      <div class="focus-icon">${icon(f.id, 26)}</div>
+      <h3>${esc(f.title)}</h3><p>${esc(f.summary)}</p>
+      ${detailed ? `<ul>${f.examples.map(e=>`<li>${esc(e)}</li>`).join("")}</ul>` : ""}
+    </article>`).join("")}</div>`;
+}
+
+function Videos(){
+  if (!SITE.videos || !SITE.videos.length) return "";
+  return `<section class="section" aria-labelledby="field-title"><div class="wrap">
+    ${SectionHead({title:"From the field", intro:"Short videos recorded by our volunteers during recent activities.", split:true, id:"field-title"})}
+    <div class="video-grid">${SITE.videos.map((v,i) => `<figure class="video-card">
+      <div class="video-frame"><video controls preload="none" playsinline poster="${v.poster}" width="${v.w}" height="${v.h}" aria-describedby="vid-${i}-desc">
+        <source src="${v.src}" type="video/mp4"></video>
+        <p class="video-fallback" hidden>This video can't play here. ${SITE.socials[0] ? `Watch more on <a href="${esc(SITE.socials[0].url)}" target="_blank" rel="noopener">${esc(SITE.socials[0].label)}</a>.` : ""}</p></div>
+      <figcaption><h3>${esc(v.title)}</h3><p id="vid-${i}-desc">${esc(v.text)}</p>${v.context ? `<p class="mb-0">${ph(v.context)}</p>` : ""}</figcaption>
+    </figure>`).join("")}</div>
+  </div></section>`;
+}
+
+/* Simplified map of South Sudan. Coordinates [lon, lat] are approximate and for orientation only. */
+const SS_OUTLINE = [[27.46,5.02],[27.0,5.6],[26.4,6.1],[25.8,6.8],[25.3,7.4],[24.6,8.2],[24.15,8.69],[24.55,8.9],[24.8,9.5],[25.1,10.1],[25.8,10.4],[26.6,9.5],[27.4,9.6],[28.0,9.4],[28.9,9.6],[29.5,10.1],[29.9,10.3],[30.8,9.7],[31.4,9.8],[31.9,10.6],[32.4,11.1],[32.3,11.7],[32.7,12.0],[32.9,12.25],[33.2,12.2],[33.1,11.4],[33.2,10.7],[33.9,10.2],[34.1,9.5],[34.0,8.6],[33.6,8.4],[33.1,8.3],[33.2,7.8],[33.7,7.6],[34.1,7.2],[34.6,6.8],[35.0,6.0],[35.3,5.4],[34.4,4.6],[33.9,4.2],[33.5,3.75],[32.9,3.8],[32.2,3.5],[31.6,3.7],[30.9,3.5],[30.6,3.7],[30.2,4.0],[29.7,4.5],[29.2,4.4],[28.6,4.4],[28.0,4.5],[27.7,4.9]];
+const NILE = [[32.05,3.58],[31.75,4.2],[31.6,4.85],[31.55,5.6],[31.58,6.2],[31.2,7.0],[30.7,7.8],[30.6,8.6],[31.1,9.3],[31.65,9.53],[32.2,10.3],[32.6,11.2],[32.85,12.2]];
+function MapSVG(){
+  const k=40, x=lon=>((lon-23.5)*k).toFixed(1), y=lat=>((12.7-lat)*k).toFixed(1);
+  const pts = SS_OUTLINE.map(([a,b])=>`${x(a)},${y(b)}`).join(" ");
+  const nile = NILE.map(([a,b],i)=>`${i?"L":"M"}${x(a)},${y(b)}`).join(" ");
+  const jx=x(31.58), jy=y(4.85);
+  const label=(t,lon,lat,anchor="middle")=>`<text x="${x(lon)}" y="${y(lat)}" text-anchor="${anchor}" fill="#BFD3BC" font-size="13" font-weight="600" letter-spacing=".04em">${t}</text>`;
+  return `<svg class="map-svg" viewBox="0 0 520 390" role="img" aria-labelledby="map-title map-desc">
+    <title id="map-title">Simplified map of South Sudan</title>
+    <desc id="map-desc">South Sudan in East-Central Africa, bordered by Sudan to the north, Ethiopia to the east, Kenya to the south-east, Uganda to the south, the Democratic Republic of the Congo to the south-west and the Central African Republic to the west. Juba, the capital, lies in Central Equatoria State in the south of the country on the White Nile. Our work is centred on Juba and Luri Payam.</desc>
+    <defs><pattern id="dots" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1" fill="rgba(255,255,255,.07)"/></pattern></defs>
+    <rect width="520" height="390" fill="url(#dots)" rx="14"/>
+    <polygon points="${pts}" fill="rgba(163,191,160,.22)" stroke="#A3BFA0" stroke-width="2" stroke-linejoin="round"/>
+    <path d="${nile}" fill="none" stroke="#7FB0C7" stroke-width="2" stroke-linecap="round" opacity=".85"/>
+    <text x="${x(30.15)}" y="${y(7.9)}" fill="#9CC3D4" font-size="11" font-style="italic" transform="rotate(-62 ${x(30.15)} ${y(7.9)})">White Nile</text>
+    ${label("SUDAN",28.4,11.6)}${label("ETHIOPIA",35.6,8.7)}${label("KENYA",35.4,3.45)}${label("UGANDA",32.4,3.15)}${label("DR CONGO",27.6,3.75)}${label("CENTRAL",23.75,5.45,"start")}${label("AFRICAN REP.",23.75,5.05,"start")}
+    <text x="${x(28.9)}" y="${y(7.6)}" text-anchor="middle" fill="#FFFFFF" font-family="Spectral, Georgia, serif" font-size="26" font-weight="600">South Sudan</text>
+    <circle cx="${jx}" cy="${jy}" r="34" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.35)" stroke-dasharray="4 4"/>
+    <circle cx="${jx}" cy="${jy}" r="11" fill="none" stroke="#FFFFFF" stroke-width="1.5" opacity=".6"/>
+    <circle cx="${jx}" cy="${jy}" r="5.5" fill="#FFFFFF"/>
+    <text x="${+jx+16}" y="${+jy+4}" fill="#FFFFFF" font-size="14" font-weight="700">Juba</text>
+    <text x="${+jx-42}" y="${+jy-6}" fill="#E7F0E5" font-size="12.5" text-anchor="end">Central Equatoria</text>
+  </svg>`;
+}
+function InsetSVG(){
+  return `<svg viewBox="0 0 220 200" role="img" aria-labelledby="inset-title inset-desc">
+    <title id="inset-title">Juba and Luri Payam, schematic</title>
+    <desc id="inset-desc">Schematic showing Juba on the White Nile and Luri Payam to its west within Central Equatoria State. Positions are indicative.</desc>
+    <path d="M150 196 C 140 160, 152 130, 146 100 S 140 40, 150 4" fill="none" stroke="#7FB0C7" stroke-width="5" stroke-linecap="round" opacity=".7"/>
+    <circle cx="146" cy="104" r="9" fill="#FFFFFF"/><text x="160" y="96" fill="#fff" font-size="13" font-weight="700">Juba</text>
+    <path d="M140 104 Q 105 92 70 86" stroke="rgba(255,255,255,.45)" stroke-width="1.5" stroke-dasharray="4 4" fill="none"/>
+    <circle cx="62" cy="84" r="26" fill="rgba(163,191,160,.28)" stroke="#A3BFA0" stroke-width="1.5"/>
+    <circle cx="62" cy="84" r="5" fill="#A3BFA0"/>
+    <text x="62" y="128" fill="#fff" font-size="13" font-weight="700" text-anchor="middle">Luri Payam</text>
+    <text x="62" y="144" fill="#BFD3BC" font-size="10.5" text-anchor="middle">position indicative</text>
+    <text x="160" y="185" fill="#9CC3D4" font-size="10" font-style="italic">White Nile</text>
+  </svg>`;
+}
+
+function WhereWeWork(headingLevel=2){
+  const H = `h${headingLevel}`;
+  return `<section class="section band on-band" aria-labelledby="where-title"><div class="wrap map-grid">
+    <div>
+      <p class="kicker">Where we work</p>
+      <${H} id="where-title">Rooted in Luri Payam, serving families in and around Juba</${H}>
+      <p class="lede">We are based in the Republic of South Sudan, in Central Equatoria State. Our work is rooted in the local community of Luri Payam.</p>
+      <ol class="loc-path" aria-label="Location, from country to community">
+        <li><span class="loc-dot" aria-hidden="true"></span><div><strong>Republic of South Sudan</strong><span>Independent since 2011</span></div></li>
+        <li><span class="loc-dot" aria-hidden="true"></span><div><strong>Central Equatoria State</strong><span>In the south of the country</span></div></li>
+        <li><span class="loc-dot" aria-hidden="true"></span><div><strong>Juba</strong><span>The national capital, on the White Nile</span></div></li>
+        <li><span class="loc-dot" aria-hidden="true"></span><div><strong>Luri Payam</strong><span>Our home community, near Juba</span></div></li>
+      </ol>
+    </div>
+    <figure class="map-card mb-0" style="margin:0">
+      <div class="map-wrap">
+        <div>${MapSVG()}</div>
+        <div class="inset"><div>${InsetSVG()}</div><div><h3>Juba area</h3><p>Luri Payam lies close to Juba, the capital, in Central Equatoria State. Volunteers travel between the two to reach households in need.</p></div></div>
+      </div>
+      <figcaption>Simplified map for orientation only. Boundaries are indicative and do not imply any position on disputed areas.</figcaption>
+    </figure>
+  </div></section>`;
+}
+
+function Stories(){
+  return `<div class="stories">${SITE.stories.map((s,i) => `<article class="story">
+    ${s.photo ? `<figure class="photo ratio-wide"><img src="${esc(s.photo)}" alt="${esc(s.alt)}" loading="lazy" decoding="async" width="900" height="560"></figure>`
+      : `<figure class="photo ratio-wide" role="img" aria-label="Photo placeholder for story ${i+1}"><div class="photo-ph"><span class="ph-icon">${icon("camera",26,1.5)}</span><span class="ph" aria-hidden="true">Consented photo to be supplied</span></div></figure>`}
+    <div class="story-body">
+      ${s.sample ? `<p class="mb-0">${ph("Sample story, replace before launch")}</p>` : ""}
+      <blockquote><p class="mb-0">${esc(s.quote)}</p></blockquote>
+      <p class="story-meta"><strong>${esc(s.name)}</strong>, ${esc(s.place)}<br>${esc(s.area)}</p>
+    </div></article>`).join("")}</div>
+    <p class="consent">Every story and photograph we publish is shared with the informed consent of the people in it. We use first names or pseudonyms and leave out details that could put anyone at risk. Children are only featured with a guardian's consent.</p>`;
+}
+
+function CTA(){
+  return `<section class="section" aria-labelledby="cta-title"><div class="wrap">
+    <div class="cta-band on-band">
+      <div>
+        <h2 id="cta-title">Help us strengthen community-led support</h2>
+        <p class="lede" style="color:var(--band-muted)">Compassion becomes more powerful when people work together. We welcome conversations with individuals, charitable institutions, foundations, businesses and other organisations.</p>
+      </div>
+      <ul class="cta-options">
+        <li><a href="#/donate"><strong>Support our work</strong><span>Learn about the ways to contribute</span>${icon("arrowOut",20,2)}</a></li>
+        <li><a href="#/get-involved?section=partner"><strong>Partner with us</strong><span>Collaborate, strengthen local capacity and support community priorities</span>${icon("arrowOut",20,2)}</a></li>
+        <li><a href="#/contact?topic=proposal"><strong>Request our concept note</strong><span>Our organisational profile and funding proposal, as they become available</span>${icon("arrowOut",20,2)}</a></li>
+      </ul>
+    </div>
+  </div></section>`;
+}
+
+/* ===== Pages ===== */
+const pages = {};
+
+pages["/"] = () => `
+  <section class="hero on-band" aria-labelledby="hero-title"><div class="wrap hero-grid">
+    <div class="hero-reveal">
+      <ul class="hero-place" aria-label="Locations"><li>Luri Payam</li><li>Juba</li><li>Central Equatoria State</li><li>South Sudan</li></ul>
+      <h1 id="hero-title" tabindex="-1">Compassion in action. Dignity for every person.</h1>
+      <p class="lede">Rooted in faith and driven by compassion, we support vulnerable individuals and families through humanitarian assistance and community-led action in Juba and Luri Payam, South Sudan.</p>
+      <div class="btn-row">${btn("Support our work","#/donate")}${btn("Our story","#/about","ghost")}</div>
+    </div>
+    <div class="hero-photo-reveal">${Photo("hero","ratio-hero","",true)}</div>
+  </div></section>
+
+  <section class="section" aria-labelledby="about-title"><div class="wrap two-col">
+    ${Photo("about","ratio-square")}
+    <div>
+      <p class="kicker">About us</p>
+      <h2 id="about-title">Compassion demonstrated through action</h2>
+      <p class="lede">A community-driven charitable initiative associated with Luri Payam, serving people facing hardship since around ${esc(SITE.founded || "2024")}.</p>
+      <p>Guided by faith in Allah, we aspire to help meet essential needs, restore dignity and bring hope. We are now strengthening our organisational foundations, documenting our activities and building partnerships to extend our reach.</p>
+      <ul class="pillars">
+        <li><strong>Our mission</strong><p>To serve vulnerable individuals and families through compassionate, faith-inspired humanitarian assistance and community support.</p></li>
+        <li><strong>Our vision</strong><p>A world where everyone can live with dignity.</p></li>
+      </ul>
+      <div class="btn-row">${btn("Read our story","#/about","ghost")}</div>
+    </div>
+  </div></section>
+
+  <section class="section band on-band" aria-labelledby="impact-title"><div class="wrap">
+    ${SectionHead({kicker:"Our impact", title:"What we have achieved so far", intro:"We only publish figures we can verify from our own records. Figures marked as awaiting are being compiled and will be added once checked.", split:true, id:"impact-title"})}
+    ${ImpactGrid()}
+    <div class="btn-row">${btn("How we measure impact","#/our-impact","ghost")}</div>
+  </div></section>
+
+  <section class="section section-alt" aria-labelledby="focus-title"><div class="wrap">
+    ${SectionHead({kicker:"Our focus areas", title:"Five ways we support families", intro:`These areas reflect what our community has asked for. ${ph("Provisional, to be confirmed")}`, split:true, id:"focus-title"})}
+    ${FocusGrid()}
+    <div class="btn-row">${btn("Explore our work","#/our-work","ghost")}</div>
+  </div></section>
+
+  ${WhereWeWork()}
+
+  <section class="section section-alt" aria-labelledby="stories-title"><div class="wrap">
+    ${SectionHead({kicker:"Stories from the community", title:"In their own words", intro:"Real voices from the families and volunteers we work with, shared with their permission.", split:true, id:"stories-title"})}
+    ${Stories()}
+  </div></section>
+
+  ${CTA()}
+`;
+
+pages["/about"] = () => `
+  ${PageHero("Rooted in faith, driven by compassion, committed to humanity", "Juba Moslem Care Foundation (JMCF) is a community-driven charitable initiative associated with Luri Payam, South Sudan. Guided by faith in Allah and a commitment to serving humanity, we seek to support vulnerable individuals and families facing hardship.", "About us")}
+
+  <section class="section"><div class="wrap two-col">
+    <div>
+      <h2>Compassion demonstrated through action</h2>
+      <p class="lede">Our guiding belief is simple: compassion should be demonstrated through action. We aspire to help meet essential needs, restore dignity and bring hope to people experiencing difficult circumstances.</p>
+      <p>Having begun our charitable journey around ${esc(SITE.founded || "2024")}, we are now strengthening our organisational foundations, documenting our activities and building partnerships that can help extend our reach and effectiveness.</p>
+      <p>Our story is still unfolding, but our purpose is clear: to serve people in need with humility, compassion and responsibility.</p>
+    </div>
+    ${Photo("about","ratio-wide")}
+  </div></section>
+
+  <section class="section-tight section-alt" aria-labelledby="story-title"><div class="wrap two-col" style="align-items:start">
+    <div><p class="kicker">Our story</p><h2 id="story-title">A commitment to serving others</h2></div>
+    <div>
+      <p>Around ${esc(SITE.founded || "2024")}, a community initiative began taking shape around a shared desire to help people facing hardship. Rooted in the local community of Luri Payam, it seeks to put faith and compassion into practice by supporting vulnerable people and responding to needs within the community.</p>
+      <p>${phInline("[Founding circumstances, the people who began the work, and the activities undertaken since then]")}</p>
+      <p>Today, JMCF is developing a clearer organisational identity, defining its priorities and establishing the systems needed to account for its work and build relationships with supporters.</p>
+      <p class="mb-0">We recognise that sustainable humanitarian work requires more than goodwill. It also requires responsible leadership, transparent use of resources, collaboration with communities and a commitment to learning from experience.</p>
+    </div>
+  </div></section>
+
+  <section class="section" aria-labelledby="vision-title"><div class="wrap">
+    <p style="margin-bottom:1.25rem">${ph("Draft for founder approval")}</p>
+    <div class="statement">
+      <p class="kicker">Our vision</p>
+      <h2 id="vision-title" class="statement-lead">A world where everyone can live with dignity.</h2>
+      <p class="lede">We envision communities in South Sudan where vulnerable individuals and families can meet their basic needs, access opportunities, and live with dignity, hope and greater security.</p>
+    </div>
+    <div class="info-grid" style="margin-top:2.5rem">
+      <div class="info"><h3>Our mission</h3><p>To serve vulnerable individuals and families with compassion, humility and selflessness, guided by our faith in Allah.</p><p>We aspire to help ensure that no one is left hungry, without essential clothing or without hope, working alongside communities to restore dignity and provide relief to those in need.</p></div>
+      <div class="info"><h3>Our overall goal</h3><p>To improve the well-being, dignity and resilience of vulnerable communities in Luri Payam, Juba, Central Equatoria State and other areas of South Sudan where we undertake our work.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section section-alt" aria-labelledby="values-title"><div class="wrap">
+    ${SectionHead({title:"Our core values", intro:`The principles we seek to uphold as our work and organisational systems develop. ${ph("Draft for founder and team approval")}`, split:true, id:"values-title"})}
+    <ul class="pillars values-grid">
+      <li><strong>Compassion and service</strong><p>We aspire to respond to suffering with practical action, kindness and respect.</p></li>
+      <li><strong>Faith and humility</strong><p>Our faith in Allah inspires our commitment to serving others with humility, while respecting the beliefs and choices of every person.</p></li>
+      <li><strong>Integrity and accountability</strong><p>We recognise the importance of managing resources responsibly, keeping accurate records and communicating honestly with communities and supporters.</p></li>
+      <li><strong>Dignity and inclusion</strong><p>We believe every person deserves respect, regardless of religion, ethnicity, gender, age or background.</p></li>
+      <li><strong>Community solidarity</strong><p>We value local knowledge and seek to work with communities to understand their needs and identify appropriate responses.</p></li>
+    </ul>
+  </div></section>
+
+  <section class="section" aria-labelledby="founder-title"><div class="wrap two-col founder">
+    <div><p class="kicker">A word from our founder</p><h2 id="founder-title">Why we serve</h2>
+      <p class="mb-0">${ph("Draft wording: the founder must review and approve before publication")}</p></div>
+    <figure class="founder-quote">
+      <blockquote>
+        <p>Our faith reminds us that we are imperfect and that we turn to Allah in prayer, seeking forgiveness and guidance. It also reminds us of our responsibility towards others.</p>
+        <p>Even when we have little, we believe we should not turn away from someone who is hungry or someone who lacks clothing. We want to do what we can to feed those who need food, clothe those who need clothing, and bring hope to people facing hardship.</p>
+        <p>Juba Moslem Care Foundation is an expression of that belief. We want to serve our community with compassion and work with others who share this purpose.</p>
+      </blockquote>
+      <figcaption>${phInline("[Founder's name]")}, ${phInline("[Confirmed title]")}</figcaption>
+    </figure>
+  </div></section>
+
+  <section class="section section-alt" aria-labelledby="approach-title"><div class="wrap">
+    ${SectionHead({title:"How we intend to work", intro:`A community-centred approach to identifying needs, providing assistance and accounting for our activities. ${ph("Founder to confirm which practices are already in place")}`, split:true, id:"approach-title"})}
+    <ol class="steps">
+      <li><h3>Listen to communities</h3><p>Understand local needs through engagement with community members and relevant local representatives.</p></li>
+      <li><h3>Identify priorities</h3><p>Determine which needs require attention and what assistance is feasible with available resources.</p></li>
+      <li><h3>Provide appropriate support</h3><p>Organise assistance according to agreed priorities, available resources and responsible delivery practices.</p></li>
+      <li><h3>Account for activities</h3><p>Keep records of assistance and expenditure, and share accurate information with relevant stakeholders.</p></li>
+    </ol>
+  </div></section>
+
+  <section class="section" aria-labelledby="journey-title"><div class="wrap two-col" style="align-items:start">
+    <div><h2 id="journey-title">Our journey</h2>
+      <p class="lede">From a shared desire to help, towards an accountable organisation.</p></div>
+    <ol class="timeline">
+      <li><h3>Around ${esc(SITE.founded || "2024")}: the beginning</h3><p>Our charitable journey began, motivated by a desire to support people experiencing hardship.</p><p style="margin-top:.5rem">${phInline("[Founding circumstances, founding members and first activities]")}</p></li>
+      <li><h3>Building a stronger foundation</h3><p>We are now working towards a clearer mission, defined priorities, stronger organisational systems and potential partnerships.</p><p style="margin-top:.5rem">${phInline("[Verified activities, milestones, volunteers involved and communities reached]")}</p></li>
+      <li><h3>Looking ahead</h3><p>We seek to strengthen our capacity to serve vulnerable communities, document our work, build responsible partnerships and develop sustainable ways of mobilising support.</p></li>
+    </ol>
+  </div></section>
+
+  <section class="section section-alt" aria-labelledby="gov-title"><div class="wrap">
+    ${SectionHead({title:"Governance and accountability", intro:"Community trust and donor confidence depend on responsible management, clear leadership and honest reporting. These details will be published once confirmed.", id:"gov-title"})}
+    <dl class="dl">
+      <div><dt>Leadership and team</dt><dd>${phInline("[Founder's name and confirmed role, and the names and roles of other team or committee members]")}</dd></div>
+      <div><dt>Registration and legal status</dt><dd>${orNull(SITE.registration, "[Whether JMCF is registered, operating under another organisation's legal status, or currently unregistered, with verified details]")}</dd></div>
+      <div><dt>Financial management</dt><dd>${phInline("[How donations are received, expenditure approved, records kept and transactions reviewed]")}</dd></div>
+      <div><dt>Safeguarding</dt><dd>${SITE.safeguardingPolicyUrl ? `<a href="${esc(SITE.safeguardingPolicyUrl)}">Read our safeguarding policy</a>` : phInline("[Current arrangements for protecting children, vulnerable adults, volunteers and beneficiaries from harm, exploitation and abuse]")}</dd></div>
+      <div><dt>Reporting and transparency</dt><dd>${phInline("[How activities, donations, expenditure and results are documented and shared with supporters]")}</dd></div>
+    </dl>
+    <p style="margin-top:1.75rem" class="muted">We are committed to ensuring that our public statements accurately reflect our actual activities, organisational arrangements and progress.</p>
+  </div></section>
+
+  <section class="section-tight" aria-labelledby="communities-title"><div class="wrap two-col" style="align-items:start">
+    <div><h2 id="communities-title">Our work and communities</h2></div>
+    <div>
+      <p>We intend to focus our efforts on the needs of vulnerable individuals and families in our area of operation. The specific beneficiary groups, programmes and geographical coverage are still being documented.</p>
+      <p>${phInline("[Activities undertaken, people supported and locations reached, once confirmed]")}</p>
+      ${btn("See our focus areas","#/our-work","ghost")}
+    </div>
+  </div></section>
+  ${CTA()}
+`;
+
+pages["/our-work"] = () => `
+  ${PageHero("Our work", "We focus on the needs our community has named as most urgent. Each area combines immediate help with steps that make families more resilient over time.", "Our work")}
+  <section class="section"><div class="wrap">
+    <div class="notice" style="margin-bottom:2rem">${icon("info",20,2)}<p>These five focus areas are provisional. They will be confirmed with the community committee before this site launches, and examples will be replaced with documented activities.</p></div>
+    ${FocusGrid(true)}
+  </div></section>
+  <section class="section section-alt" aria-labelledby="objectives-title"><div class="wrap">
+    ${SectionHead({title:"Our priorities for the year ahead", intro:`Our priorities reflect our commitment to serving vulnerable communities while strengthening our ability to deliver assistance responsibly. ${ph("Draft for founder and community committee approval")}`, split:true, id:"objectives-title"})}
+    <ol class="steps">
+      <li><h3>Understand community needs</h3><p>Work with community representatives to identify priority needs, vulnerable groups and appropriate responses.</p></li>
+      <li><h3>Strengthen community assistance</h3><p>Organise practical support based on verified needs, available resources and priorities agreed with the community.</p></li>
+      <li><h3>Build partnerships</h3><p>Engage potential donors, charitable institutions, foundations and other organisations whose objectives align with our work.</p></li>
+      <li><h3>Strengthen accountability</h3><p>Establish reliable records for donations, expenditure, activities and people reached, with appropriate oversight.</p></li>
+      <li><h3>Develop organisational capacity</h3><p>Clarify leadership responsibilities, strengthen safeguarding, and formalise the systems needed to sustain and responsibly expand our work.</p></li>
+    </ol>
+    <p class="muted" style="margin-top:1.5rem">Specific targets will be set after reviewing our existing activities, resources and capacity.</p>
+  </div></section>
+  ${Videos()}
+  <section class="section-tight section-alt"><div class="wrap two-col">
+    ${Photo("work","ratio-wide")}
+    <div>
+      <h2>Who we seek to support</h2>
+      <p>We focus on vulnerable individuals and families facing hardship in our area of operation, prioritising those in greatest need.</p>
+      <p class="mb-0">${phInline("[Specific groups supported, such as widows, orphans or displaced families, and how people are selected, once confirmed]")}</p>
+    </div>
+  </div></section>
+  ${WhereWeWork()}
+  ${CTA()}
+`;
+
+pages["/our-impact"] = () => `
+  ${PageHero("Our impact", "We report only what we can verify. As we strengthen our record-keeping, verified results will be published here.", "Our impact")}
+  <section class="section"><div class="wrap">
+    ${SectionHead({title:"Results to date", intro:"Figures marked as awaiting are being compiled from our records and will be published once checked.", split:true})}
+    ${ImpactGrid(true)}
+  </div></section>
+  <section class="section section-alt"><div class="wrap">
+    ${SectionHead({title:"How we will verify our figures", intro:`The record-keeping practices we are putting in place. ${ph("Founder to confirm current practice")}`})}
+    <ol class="steps">
+      <li><h3>Record</h3><p>Log every distribution and activity: who, what, where and when.</p></li>
+      <li><h3>Cross-check</h3><p>A second person reviews records against receipts and stock.</p></li>
+      <li><h3>Count once</h3><p>Count each household once per reporting period, even if it receives support several times.</p></li>
+      <li><h3>Publish</h3><p>Share totals with the community and on this site, stating the reporting period.</p></li>
+    </ol>
+  </div></section>
+  <section class="section"><div class="wrap">
+    ${SectionHead({title:"Reports and documents"})}
+    <div class="info-grid">
+      <div class="info"><h3>Annual report</h3><p>A summary of activities, results and spending for the year.</p>${SITE.annualReportUrl ? btn("Download report", esc(SITE.annualReportUrl), "ghost") : ph("Not yet published")}</div>
+      <div class="info"><h3>Financial summary</h3><p>How funds were received and used, by focus area.</p>${ph("Not yet published")}</div>
+      <div class="info"><h3>Safeguarding policy</h3><p>How we protect the people we serve, especially children.</p>${SITE.safeguardingPolicyUrl ? btn("Read policy", esc(SITE.safeguardingPolicyUrl), "ghost") : ph("Not yet published")}</div>
+    </div>
+  </div></section>
+  <section class="section section-alt"><div class="wrap">
+    ${SectionHead({title:"Stories from the community", split:true, intro:"Numbers tell part of the story. These voices tell the rest."})}
+    ${Stories()}
+  </div></section>
+  ${CTA()}
+`;
+
+pages["/get-involved"] = () => `
+  ${PageHero("Get involved", "There are several ways to support families in Luri Payam and Juba, whether you are an individual, a congregation, a foundation or an institutional donor.", "Get involved")}
+  <section class="section"><div class="wrap">
+    <div class="info-grid">
+      <div class="info"><h3>Give</h3><p>One-time or monthly gifts help us respond where need is greatest.</p>${btn("Donate","#/donate")}</div>
+      <div class="info"><h3>Fundraise</h3><p>Raise funds through your community, mosque, church, school or workplace. We will provide materials and updates.</p>${btn("Tell us your idea","#/contact?topic=fundraise","ghost")}</div>
+      <div class="info"><h3>Volunteer and share skills</h3><p>South Sudanese in the diaspora and professionals can help with planning, finance, health or communications, remotely or in person.</p>${btn("Offer your skills","#/contact?topic=volunteer","ghost")}</div>
+    </div>
+  </div></section>
+
+  <section class="section section-alt" id="partner" aria-labelledby="partner-title"><div class="wrap two-col">
+    <div>
+      <p class="kicker">Partner with us</p>
+      <h2 id="partner-title" tabindex="-1">Fund locally led work with clear accountability</h2>
+      <p class="lede">We welcome partnerships with foundations, Muslim philanthropic organisations, faith-based networks, institutional donors and NGOs.</p>
+      <p>Partners can fund a focus area, an emergency response or core capacity such as governance, record-keeping and safeguarding. We agree reporting requirements with each partner and share regular progress updates.</p>
+      <div class="btn-row">
+        ${SITE.conceptNoteUrl ? `<a class="btn btn-primary" href="${esc(SITE.conceptNoteUrl)}" download>${icon("doc",20,2)} Download concept note</a>`
+          : `<button class="btn btn-primary" type="button" aria-disabled="true" aria-describedby="cn-note" onclick="return false">${icon("doc",20,2)} Download concept note</button>`}
+        ${btn("Request funding proposal","#/contact?topic=proposal","ghost")}
+      </div>
+      ${SITE.conceptNoteUrl ? "" : `<p id="cn-note" class="muted" style="margin-top:1rem; font-size:.9375rem">${ph("Concept note not yet uploaded")} Request it through our contact form and we will send it directly.</p>`}
+    </div>
+    <div class="panel">
+      <h3>What a partnership includes</h3>
+      <dl class="dl">
+        <div><dt>Agreed objectives</dt><dd>Clear activities, targets and budget, set together.</dd></div>
+        <div><dt>Regular reporting</dt><dd>Progress and spending updates on an agreed schedule.</dd></div>
+        <div><dt>Field visits</dt><dd>Partners are welcome to visit or meet our community remotely.</dd></div>
+        <div><dt>Fund designation</dt><dd>Restricted or unrestricted funding, honoured as agreed.</dd></div>
+      </dl>
+    </div>
+  </div></section>
+  <section class="section-tight"><div class="wrap">${Photo("involved","ratio-wide")}</div></section>
+  ${CTA()}
+`;
+
+const TOPICS = [
+  ["general","General enquiry"],["proposal","Request funding proposal or concept note"],["partner","Partnership"],
+  ["fundraise","Fundraising"],["volunteer","Volunteering or skills"],["media","Media"],
+];
+pages["/contact"] = (q) => {
+  const sel = TOPICS.some(t=>t[0]===q.topic) ? q.topic : "";
+  return `
+  ${PageHero("Contact us", "Send us a message, request our funding proposal or ask about partnership. We aim to reply within a few working days.", "Contact")}
+  <section class="section"><div class="wrap contact-grid">
+    <div class="panel">
+      <h2 style="font-size:1.75rem">Send a message</h2>
+      ${SITE.contactFormEndpoint ? "" : `<div class="notice" style="margin:0 0 1.5rem">${icon("info",20,2)}<p><strong>Message delivery is not yet configured.</strong> You can fill in and check the form, but messages will not be sent until the site is connected to an email service.</p></div>`}
+      <form class="form" id="contact-form" novalidate>
+        <div class="form-row">
+          <div class="field"><label for="c-name">Full name <span class="req">(required)</span></label>
+            <input id="c-name" name="name" type="text" autocomplete="name" required aria-describedby="c-name-err"><p class="err" id="c-name-err"></p></div>
+          <div class="field"><label for="c-email">Email <span class="req">(required)</span></label>
+            <input id="c-email" name="email" type="email" autocomplete="email" required aria-describedby="c-email-err"><p class="err" id="c-email-err"></p></div>
+        </div>
+        <div class="field"><label for="c-org">Organisation <span class="req">(optional)</span></label>
+          <input id="c-org" name="organisation" type="text" autocomplete="organization"></div>
+        <div class="field"><label for="c-topic">What is this about? <span class="req">(required)</span></label>
+          <select id="c-topic" name="topic" required aria-describedby="c-topic-err">
+            <option value="">Choose a topic</option>
+            ${TOPICS.map(([v,l])=>`<option value="${v}" ${v===sel?"selected":""}>${l}</option>`).join("")}
+          </select><p class="err" id="c-topic-err"></p></div>
+        <div class="field"><label for="c-msg">Message <span class="req">(required)</span></label>
+          <p class="hint" id="c-msg-hint">At least 20 characters. Please do not include bank or card details.</p>
+          <textarea id="c-msg" name="message" required minlength="20" maxlength="3000" aria-describedby="c-msg-hint c-msg-err"></textarea><p class="err" id="c-msg-err"></p></div>
+        <div class="field">
+          <div class="check"><input id="c-consent" name="consent" type="checkbox" required aria-describedby="c-consent-err">
+            <label for="c-consent">I agree that my details may be used to respond to this message. They will not be shared or used for anything else.</label></div>
+          <p class="err" id="c-consent-err"></p>
+        </div>
+        <div style="position:absolute; left:-9999px" aria-hidden="true"><label for="c-web">Leave blank</label><input id="c-web" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+        <div><button class="btn btn-primary" type="submit" id="c-submit">Send message</button></div>
+        <div class="status" id="c-status" role="status" tabindex="-1"></div>
+      </form>
+    </div>
+    <aside aria-label="Contact details">
+      <h2 style="font-size:1.75rem">Contact details</h2>
+      <dl class="dl">
+        <div><dt>${icon("mail",18,2)} Email</dt><dd>${SITE.email ? `<a href="mailto:${esc(SITE.email)}">${esc(SITE.email)}</a>` : phInline("[Email address]")}</dd></div>
+        <div><dt>${icon("phone",18,2)} Phone</dt><dd>${SITE.phone ? `<a href="tel:${esc(SITE.phone.replace(/\s/g,""))}">${esc(SITE.phone)}</a>` : phInline("[Phone number]")}</dd></div>
+        <div><dt>${icon("pin",18,2)} Location</dt><dd>${SITE.address ? esc(SITE.address) : `Luri Payam, Juba<br>Central Equatoria State<br>Republic of South Sudan<br>${phInline("[Full postal address, if any]")}`}</dd></div>
+      </dl>
+      <p class="muted" style="margin-top:1.5rem; font-size:.9375rem">Requesting our funding proposal? Choose that topic and tell us a little about your organisation and funding priorities.</p>
+    </aside>
+  </div></section>`;
+};
+
+pages["/donate"] = () => {
+  const d = SITE.donation, live = !!d.checkoutUrl;
+  return `
+  ${PageHero("Support our work", "Your gift helps volunteers in Luri Payam and Juba reach the families who need it most.", "Donate")}
+  <section class="section"><div class="wrap contact-grid">
+    <div class="panel">
+      ${live ? "" : `<div class="notice" style="margin:0 0 1.5rem">${icon("info",20,2)}<p><strong>Online giving is not live yet.</strong> We are setting up a secure, regulated payment provider. No payment details are collected on this page. To give now, please <a href="#/contact?topic=general">contact us</a>.</p></div>`}
+      <form class="form" id="donate-form" novalidate>
+        <fieldset class="field"><legend>How often?</legend>
+          <div class="choice-row">
+            <label class="choice"><input type="radio" name="freq" value="once" checked><span>One time</span></label>
+            <label class="choice"><input type="radio" name="freq" value="monthly"><span>Monthly</span></label>
+          </div></fieldset>
+        <fieldset class="field"><legend>Amount (${esc(d.currency)})</legend>
+          <div class="choice-row">${d.presets.map((a,i)=>`<label class="choice"><input type="radio" name="amount" value="${a}" ${i===1?"checked":""}><span>${a}</span></label>`).join("")}
+            <label class="choice"><input type="radio" name="amount" value="other"><span>Other</span></label></div></fieldset>
+        <div class="field" id="other-wrap" hidden><label for="d-other">Other amount (${esc(d.currency)})</label>
+          <input id="d-other" type="number" min="1" step="1" inputmode="numeric" aria-describedby="d-other-err"><p class="err" id="d-other-err"></p></div>
+        <div class="field"><label for="d-fund">Direct my gift to</label>
+          <select id="d-fund">
+            <option value="general">Where it's needed most</option>
+            ${FOCUS.map(f=>`<option value="${f.id}">${esc(f.title)}</option>`).join("")}
+            <option value="zakat">Zakat</option><option value="sadaqah">Sadaqah</option>
+          </select>
+          <p class="hint">Zakat and Sadaqah are kept separate from general funds. ${ph("Zakat distribution policy to be confirmed")}</p></div>
+        <div class="summary-box" aria-live="polite"><p id="d-summary"></p></div>
+        <div>
+          <button class="btn btn-primary" type="submit" ${live ? "" : 'aria-disabled="true" aria-describedby="d-status"'}>Continue to secure payment</button>
+        </div>
+        <div class="status" id="d-status" role="status" tabindex="-1"></div>
+      </form>
+    </div>
+    <aside aria-label="About giving">
+      <h2 style="font-size:1.75rem">Giving with confidence</h2>
+      <dl class="dl">
+        <div><dt>Secure payments</dt><dd>When online giving launches, payments will be handled by a regulated provider. We never see or store card details.</dd></div>
+        <div><dt>Bank transfer</dt><dd>${phInline("[Bank details to be published once the account is verified]")}</dd></div>
+        <div><dt>Registration</dt><dd>${orNull(SITE.registration, "[Registration status and number]")}</dd></div>
+        <div><dt>Gift reporting</dt><dd>We will publish how donations are used in our annual report.</dd></div>
+      </dl>
+      <p class="muted" style="margin-top:1.5rem; font-size:.9375rem">Giving on behalf of a foundation or organisation? <a href="#/get-involved?section=partner">See partnership options</a>.</p>
+    </aside>
+  </div></section>`;
+};
+
+pages["/404"] = () => `<section class="section not-found"><div class="wrap">
+  <h1 tabindex="-1">This page doesn't exist</h1><p class="lede">The link may be out of date. Use the menu above, or go back to the homepage.</p>
+  <div class="btn-row">${btn("Go to homepage","#/")}</div></div></section>`;
+
+/* ===== Page behaviours ===== */
+function wireVideos(){
+  document.querySelectorAll(".video-frame video").forEach(v => {
+    const fail = () => { v.hidden = true; v.parentElement.style.background = `linear-gradient(rgba(10,22,16,.72),rgba(10,22,16,.72)), center/cover no-repeat url(${v.getAttribute("poster")})`; const f = v.parentElement.querySelector(".video-fallback"); if (f) f.hidden = false; };
+    v.addEventListener("error", fail, true); v.querySelector("source")?.addEventListener("error", fail);
+  });
+}
+const behaviours = {
+  "/contact": () => {
+    const f = $("#contact-form"); if (!f) return;
+    const status = $("#c-status");
+    const rules = {
+      "c-name": el => el.value.trim().length >= 2 ? "" : "Enter your full name.",
+      "c-email": el => !el.value.trim() ? "Enter your email address." : (/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(el.value.trim()) ? "" : "Enter an email address like name@example.org."),
+      "c-topic": el => el.value ? "" : "Choose what your message is about.",
+      "c-msg": el => el.value.trim().length >= 20 ? "" : `Write at least 20 characters (currently ${el.value.trim().length}).`,
+      "c-consent": el => el.checked ? "" : "Tick the box so we can use your details to reply.",
+    };
+    const check = id => { const el = $("#"+id), msg = rules[id](el), err = $("#"+id+"-err");
+      err.textContent = msg; err.classList.toggle("show", !!msg); el.setAttribute("aria-invalid", msg ? "true" : "false"); return !msg; };
+    Object.keys(rules).forEach(id => { const el = $("#"+id);
+      el.addEventListener("blur", () => { if (el.dataset.touched) check(id); });
+      el.addEventListener("input", () => { el.dataset.touched = 1; if (el.getAttribute("aria-invalid")==="true") check(id); });
+      el.addEventListener("change", () => { el.dataset.touched = 1; check(id); }); });
+    f.addEventListener("submit", async e => {
+      e.preventDefault();
+      const results = Object.keys(rules).map(id => [id, check(id)]);
+      const firstBad = results.find(r => !r[1]);
+      if (firstBad){ $("#"+firstBad[0]).focus(); return; }
+      if ($("#c-web").value) return; // spam trap
+      const data = Object.fromEntries(new FormData(f).entries());
+      const show = (cls, html) => { status.className = "status show " + cls; status.innerHTML = html; status.focus(); };
+      if (!SITE.contactFormEndpoint){
+        show("pending", `<strong>Your message has not been sent.</strong><p>The form is working, but message delivery is not configured yet. ${SITE.email ? `Please email us at <a href="mailto:${esc(SITE.email)}">${esc(SITE.email)}</a> instead.` : "Please use the contact details on this page once they are published."}</p>`);
+        return;
+      }
+      const b = $("#c-submit"); b.disabled = true; b.textContent = "Sending…";
+      try {
+        const r = await fetch(SITE.contactFormEndpoint, { method:"POST", headers:{ "Content-Type":"application/json", "Accept":"application/json" }, body: JSON.stringify(data) });
+        if (!r.ok) throw new Error(r.status);
+        f.reset(); show("ok", `<strong>Message sent.</strong><p>Thank you. We will reply to ${esc(data.email)} within a few working days.</p>`);
+      } catch(err){
+        show("bad", `<strong>Message not sent.</strong><p>We couldn't reach our message service. Check your connection and try again${SITE.email ? `, or email <a href="mailto:${esc(SITE.email)}">${esc(SITE.email)}</a>` : ""}.</p>`);
+      } finally { b.disabled = false; b.textContent = "Send message"; }
+    });
+  },
+  "/donate": () => {
+    const f = $("#donate-form"); if (!f) return;
+    const d = SITE.donation, otherWrap = $("#other-wrap"), other = $("#d-other"), sum = $("#d-summary"), status = $("#d-status");
+    const val = () => {
+      const freq = f.querySelector("[name=freq]:checked").value;
+      const pick = f.querySelector("[name=amount]:checked").value;
+      const amt = pick === "other" ? parseInt(other.value, 10) : parseInt(pick, 10);
+      const fund = $("#d-fund"); return { freq, pick, amt, fundLabel: fund.options[fund.selectedIndex].text, fund: fund.value };
+    };
+    const update = () => { const v = val(); otherWrap.hidden = v.pick !== "other";
+      sum.textContent = (v.amt > 0) ? `You are choosing to give ${d.currency} ${v.amt}${v.freq==="monthly" ? " each month" : " once"}, directed to: ${v.fundLabel}.` : "Enter an amount to see your gift summary."; };
+    f.addEventListener("change", update); other.addEventListener("input", update); update();
+    f.addEventListener("submit", e => {
+      e.preventDefault(); const v = val(), err = $("#d-other-err");
+      if (v.pick === "other" && !(v.amt >= 1)){ err.textContent = "Enter a whole amount of 1 or more."; err.classList.add("show"); other.setAttribute("aria-invalid","true"); other.focus(); return; }
+      err.classList.remove("show"); other.removeAttribute("aria-invalid");
+      if (!d.checkoutUrl){
+        status.className = "status show pending";
+        status.innerHTML = `<strong>No payment was taken.</strong><p>Online giving will open once our secure payment provider is connected. Your choice of ${esc(d.currency)} ${v.amt} has not been saved. To give now, please <a href="#/contact?topic=general">contact us</a>.</p>`;
+        status.focus(); return;
+      }
+      const url = new URL(d.checkoutUrl); url.searchParams.set("amount", v.amt); url.searchParams.set("frequency", v.freq); url.searchParams.set("fund", v.fund);
+      window.location.href = url.toString(); // hand off to provider's hosted checkout
+    });
+  },
+};
+
+/* ===== Shell: nav, footer ===== */
+function renderNav(){
+  $("#nav-list").innerHTML = NAV.map(n => `<li><a href="#${n.path}" data-path="${n.path}">${n.label}</a></li>`).join("");
+  document.querySelectorAll("[data-org-name]").forEach(el => el.textContent = SITE.name);
+  if (SITE.tagline) document.querySelectorAll(".brand-sub").forEach(el => el.textContent = SITE.tagline);
+  if (SITE.logo){ const l = document.querySelector(".logo-ph"); l.className = "logo"; l.innerHTML = `<img src="${SITE.logo}" alt="" width="52" height="52">`; }
+}
+function renderFooter(){
+  const year = new Date().getFullYear();
+  $("#footer").innerHTML = `<div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand" style="grid-column:span 1">
+        ${SITE.logo ? `<img class="footer-logo" src="${SITE.logo}" alt="${esc(SITE.name)} logo" width="88" height="88" loading="lazy">` : ""}
+        <p class="brand-name" style="margin:0 0 .6rem">${esc(SITE.name)}</p>
+        ${SITE.tagline ? `<p style="font-style:italic; margin-bottom:.6rem">${esc(SITE.tagline)}</p>` : ""}
+        <p>A community-led humanitarian initiative in Luri Payam and Juba, Central Equatoria State, Republic of South Sudan.</p>
+      </div>
+      <nav aria-label="Footer"><h2>Explore</h2><ul>
+        <li><a href="#/">Home</a></li>${NAV.map(n=>`<li><a href="#${n.path}">${n.label}</a></li>`).join("")}<li><a href="#/donate">Donate</a></li></ul></nav>
+      <div><h2>Contact</h2><ul>
+        <li>${SITE.email ? `<a href="mailto:${esc(SITE.email)}">${esc(SITE.email)}</a>` : ph("Email to be added")}</li>
+        <li>${SITE.phone ? esc(SITE.phone) : ph("Phone to be added")}</li>
+        <li>Luri Payam, Juba, South Sudan</li></ul>
+        <h2 style="margin-top:1.5rem">Follow us</h2>
+        ${SITE.socials.length ? `<ul>${SITE.socials.map(s=>`<li><a href="${esc(s.url)}" rel="noopener" target="_blank">${esc(s.label)}<span class="visually-hidden"> (opens in a new tab)</span></a></li>`).join("")}</ul>` : `<p>${ph("Social links to be added")}</p>`}
+      </div>
+      <div><h2>Transparency</h2><ul>
+        <li>Registration: ${SITE.registration ? esc(SITE.registration) : ph("To be confirmed")}</li>
+        <li>${SITE.annualReportUrl ? `<a href="${esc(SITE.annualReportUrl)}">Annual report</a>` : `Annual report: ${ph("Not yet published")}`}</li>
+        <li>${SITE.safeguardingPolicyUrl ? `<a href="${esc(SITE.safeguardingPolicyUrl)}">Safeguarding policy</a>` : `Safeguarding: ${ph("Policy to be published")}`}</li>
+        <li><a href="#/our-impact">How we will verify our figures</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>&copy; ${year} ${esc(SITE.name)}. All rights reserved.</span><span>Stories and photos are shared with the consent of those featured.</span></div>
+  </div>`;
+}
+
+/* ===== Router ===== */
+const TITLES = { "/":"Home", "/about":"About us", "/our-work":"Our work", "/our-impact":"Our impact", "/get-involved":"Get involved", "/contact":"Contact", "/donate":"Donate", "/404":"Page not found" };
+let firstLoad = true;
+function parseHash(){
+  const raw = (location.hash || "#/").slice(1) || "/";
+  const [path, qs] = raw.split("?");
+  return { path: path.replace(/\/+$/,"") || "/", query: Object.fromEntries(new URLSearchParams(qs || "")) };
+}
+function router(){
+  const { path, query } = parseHash();
+  const key = pages[path] ? path : "/404";
+  $("#main").innerHTML = pages[key](query);
+  document.title = `${TITLES[key]} | ${SITE.name}`;
+  document.querySelectorAll("#nav-list a").forEach(a => a.dataset.path === path ? a.setAttribute("aria-current","page") : a.removeAttribute("aria-current"));
+  closeMenu();
+  behaviours[key] && behaviours[key]();
+  wireVideos();
+  const target = query.section && document.getElementById(query.section);
+  if (target){
+    target.scrollIntoView({ block:"start" });
+    (target.querySelector("h2[tabindex], h1[tabindex]") || target).focus({ preventScroll:true });
+  } else {
+    window.scrollTo(0,0);
+    if (!firstLoad){ const h = $("#main h1"); h && h.focus({ preventScroll:true }); }
+  }
+  if (!firstLoad) $("#route-announcer").textContent = `${TITLES[key]} page`;
+  firstLoad = false;
+}
+
+/* ===== Mobile menu ===== */
+const menuBtn = $("#menu-btn"), siteNav = $("#site-nav");
+function closeMenu(){ siteNav.classList.remove("open"); menuBtn.setAttribute("aria-expanded","false"); }
+menuBtn.addEventListener("click", () => { const open = !siteNav.classList.contains("open");
+  siteNav.classList.toggle("open", open); menuBtn.setAttribute("aria-expanded", String(open)); if (open) siteNav.querySelector("a").focus(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape" && siteNav.classList.contains("open")){ closeMenu(); menuBtn.focus(); } });
+document.addEventListener("click", e => { if (siteNav.classList.contains("open") && !siteNav.contains(e.target) && !menuBtn.contains(e.target)) closeMenu(); });
+
+/* Skip link: focus main without changing the hash route */
+$(".skip").addEventListener("click", e => { e.preventDefault(); $("#main").focus(); });
+
+renderNav(); renderFooter();
+window.addEventListener("hashchange", router);
+router();
+</script>
+</body>
+</html>
