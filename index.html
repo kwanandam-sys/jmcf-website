@@ -98,6 +98,8 @@ p{margin:0 0 1em; max-width:66ch}
 .logo{flex:none; width:52px; height:52px; border-radius:50%; overflow:hidden; background:#fff; box-shadow:0 0 0 1px var(--line)}
 .logo img{width:100%; height:100%}
 .footer-logo{width:88px; height:88px; border-radius:50%; background:#fff; margin-bottom:1rem}
+.footer-brand-link{text-decoration:none; color:inherit; display:block}
+.footer-brand-link:hover .brand-name{text-decoration:underline}
 .video-grid{display:grid; gap:1.5rem}
 @media (min-width: 800px){ .video-grid{grid-template-columns:1fr 1fr} }
 .video-card{margin:0; background:var(--surface); border:1px solid var(--line); border-radius:var(--r-md); overflow:hidden}
@@ -1070,10 +1072,12 @@ function renderFooter(){
   $("#footer").innerHTML = `<div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand" style="grid-column:span 1">
-        ${SITE.logo ? `<img class="footer-logo" src="${SITE.logo}" alt="${esc(SITE.name)} logo" width="88" height="88" loading="lazy">` : ""}
-        <p class="brand-name" style="margin:0 0 .6rem">${esc(SITE.name)}</p>
-        ${SITE.tagline ? `<p style="font-style:italic; margin-bottom:.6rem">${esc(SITE.tagline)}</p>` : ""}
-        <p>A community-led humanitarian initiative in Luri Payam and Juba, Central Equatoria State, Republic of South Sudan.</p>
+        <a href="#/" class="footer-brand-link" aria-label="Juba Moslem Care Foundation Home">
+          ${SITE.logo ? `<img class="footer-logo" src="${SITE.logo}" alt="${esc(SITE.name)} logo" width="88" height="88" loading="lazy">` : ""}
+          <p class="brand-name" style="margin:0 0 .6rem">${esc(SITE.name)}</p>
+          ${SITE.tagline ? `<p style="font-style:italic; margin-bottom:.6rem">${esc(SITE.tagline)}</p>` : ""}
+          <p>A community-led humanitarian initiative in Luri Payam and Juba, Central Equatoria State, Republic of South Sudan.</p>
+        </a>
       </div>
       <nav aria-label="Footer"><h2>Explore</h2><ul>
         <li><a href="#/">Home</a></li>${NAV.map(n=>`<li><a href="#${n.path}">${n.label}</a></li>`).join("")}<li><a href="#/donate">Donate</a></li></ul></nav>
