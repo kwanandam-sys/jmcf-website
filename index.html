@@ -7,7 +7,6 @@
 <meta name="description" content="Juba Moslem Care Foundation serves vulnerable individuals and families in Luri Payam and Juba, South Sudan, with compassion, humility and selflessness, guided by faith in Allah.">
 <link rel="icon" href="assets/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="assets/favicon.png">
-<!-- After going live, add: <meta property="og:image" content="https://YOUR-DOMAIN/assets/share.jpg"> -->
 <meta name="theme-color" content="#11301F">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Juba Moslem Care Foundation">
@@ -528,8 +527,7 @@ function ImpactGrid(light=false){
 function FocusGrid(detailed=false){
   return `<div class="focus-grid">${FOCUS.map((f,i) => `<article class="focus-card ${i===0 ? "feature" : ""}" id="focus-${f.id}">
       <div class="focus-icon">${icon(f.id, 26)}</div>
-      <h3>${esc(f.title)}</h3><p>${esc(f.summary)}</p>
-      ${detailed ? `<ul>${f.examples.map(e=>`<li>${esc(e)}</li>`).join("")}</ul>` : ""}
+      <h3>${esc(f.title)}</h3><p>${esc(f.summary)}</p>${detailed ? `<ul>${f.examples.map(e=>`<li>${esc(e)}</li>`).join("")}</ul>` : ""}
     </article>`).join("")}</div>`;
 }
 
@@ -707,14 +705,13 @@ pages["/about"] = () => `
     <div><p class="kicker">Our story</p><h2 id="story-title">A commitment to serving others</h2></div>
     <div>
       <p>Around ${esc(SITE.founded || "2024")}, a community initiative began taking shape around a shared desire to help people facing hardship. Rooted in the local community of Luri Payam, it seeks to put faith and compassion into practice by supporting vulnerable people and responding to needs within the community.</p>
-      <p>${phInline("[Founding circumstances, the people who began the work, and the activities undertaken since then]")}</p>
+      <p>The foundation was born from the vision of Hussein Adamz, who witnessed deep suffering within the community. Burdened at heart by the stark contrast between the highly privileged and the deeply underprivileged, he was moved to bridge this gap. This deep sense of responsibility sparked our core activities: providing emergency food relief, distributing essential clothing, and offering practical support to bring hope to families facing extreme hardship.</p>
       <p>Today, JMCF is developing a clearer organisational identity, defining its priorities and establishing the systems needed to account for its work and build relationships with supporters.</p>
       <p class="mb-0">We recognise that sustainable humanitarian work requires more than goodwill. It also requires responsible leadership, transparent use of resources, collaboration with communities and a commitment to learning from experience.</p>
     </div>
   </div></section>
 
   <section class="section" aria-labelledby="vision-title"><div class="wrap">
-    <p style="margin-bottom:1.25rem">${ph("Draft for founder approval")}</p>
     <div class="statement">
       <p class="kicker">Our vision</p>
       <h2 id="vision-title" class="statement-lead">A world where everyone can live with dignity.</h2>
@@ -727,7 +724,7 @@ pages["/about"] = () => `
   </div></section>
 
   <section class="section section-alt" aria-labelledby="values-title"><div class="wrap">
-    ${SectionHead({title:"Our core values", intro:`The principles we seek to uphold as our work and organisational systems develop. ${ph("Draft for founder and team approval")}`, split:true, id:"values-title"})}
+    ${SectionHead({title:"Our core values", intro:`The principles we seek to uphold as our work and organisational systems develop.`, split:true, id:"values-title"})}
     <ul class="pillars values-grid">
       <li><strong>Compassion and service</strong><p>We aspire to respond to suffering with practical action, kindness and respect.</p></li>
       <li><strong>Faith and humility</strong><p>Our faith in Allah inspires our commitment to serving others with humility, while respecting the beliefs and choices of every person.</p></li>
@@ -738,20 +735,19 @@ pages["/about"] = () => `
   </div></section>
 
   <section class="section" aria-labelledby="founder-title"><div class="wrap two-col founder">
-    <div><p class="kicker">A word from our founder</p><h2 id="founder-title">Why we serve</h2>
-      <p class="mb-0">${ph("Draft wording: the founder must review and approve before publication")}</p></div>
+    <div><p class="kicker">A word from our founder</p><h2 id="founder-title">Why we serve</h2></div>
     <figure class="founder-quote">
       <blockquote>
         <p>Our faith reminds us that we are imperfect and that we turn to Allah in prayer, seeking forgiveness and guidance. It also reminds us of our responsibility towards others.</p>
         <p>Even when we have little, we believe we should not turn away from someone who is hungry or someone who lacks clothing. We want to do what we can to feed those who need food, clothe those who need clothing, and bring hope to people facing hardship.</p>
         <p>Juba Moslem Care Foundation is an expression of that belief. We want to serve our community with compassion and work with others who share this purpose.</p>
       </blockquote>
-      <figcaption>${phInline("[Founder's name]")}, ${phInline("[Confirmed title]")}</figcaption>
+      <figcaption>Hussein Adamz, Founder</figcaption>
     </figure>
   </div></section>
 
   <section class="section section-alt" aria-labelledby="approach-title"><div class="wrap">
-    ${SectionHead({title:"How we intend to work", intro:`A community-centred approach to identifying needs, providing assistance and accounting for our activities. ${ph("Founder to confirm which practices are already in place")}`, split:true, id:"approach-title"})}
+    ${SectionHead({title:"How we intend to work", intro:`A community-centred approach to identifying needs, providing assistance and accounting for our activities.`, split:true, id:"approach-title"})}
     <ol class="steps">
       <li><h3>Listen to communities</h3><p>Understand local needs through engagement with community members and relevant local representatives.</p></li>
       <li><h3>Identify priorities</h3><p>Determine which needs require attention and what assistance is feasible with available resources.</p></li>
@@ -764,7 +760,7 @@ pages["/about"] = () => `
     <div><h2 id="journey-title">Our journey</h2>
       <p class="lede">From a shared desire to help, towards an accountable organisation.</p></div>
     <ol class="timeline">
-      <li><h3>Around ${esc(SITE.founded || "2024")}: the beginning</h3><p>Our charitable journey began, motivated by a desire to support people experiencing hardship.</p><p style="margin-top:.5rem">${phInline("[Founding circumstances, founding members and first activities]")}</p></li>
+      <li><h3>Around ${esc(SITE.founded || "2024")}: the beginning</h3><p>Our charitable journey began, motivated by a desire to support people experiencing hardship.</p><p style="margin-top:.5rem">Witnessing the stark gap between the privileged and unprivileged, our founder Hussein Adamz began mobilizing resources to provide immediate relief, including food and clothing distributions, to those most in need.</p></li>
       <li><h3>Building a stronger foundation</h3><p>We are now working towards a clearer mission, defined priorities, stronger organisational systems and potential partnerships.</p><p style="margin-top:.5rem">${phInline("[Verified activities, milestones, volunteers involved and communities reached]")}</p></li>
       <li><h3>Looking ahead</h3><p>We seek to strengthen our capacity to serve vulnerable communities, document our work, build responsible partnerships and develop sustainable ways of mobilising support.</p></li>
     </ol>
@@ -773,7 +769,7 @@ pages["/about"] = () => `
   <section class="section section-alt" aria-labelledby="gov-title"><div class="wrap">
     ${SectionHead({title:"Governance and accountability", intro:"Community trust and donor confidence depend on responsible management, clear leadership and honest reporting. These details will be published once confirmed.", id:"gov-title"})}
     <dl class="dl">
-      <div><dt>Leadership and team</dt><dd>${phInline("[Founder's name and confirmed role, and the names and roles of other team or committee members]")}</dd></div>
+      <div><dt>Leadership and team</dt><dd>Hussein Adamz, Founder<br>${phInline("[Names and roles of other team or committee members]")}</dd></div>
       <div><dt>Registration and legal status</dt><dd>${orNull(SITE.registration, "[Whether JMCF is registered, operating under another organisation's legal status, or currently unregistered, with verified details]")}</dd></div>
       <div><dt>Financial management</dt><dd>${phInline("[How donations are received, expenditure approved, records kept and transactions reviewed]")}</dd></div>
       <div><dt>Safeguarding</dt><dd>${SITE.safeguardingPolicyUrl ? `<a href="${esc(SITE.safeguardingPolicyUrl)}">Read our safeguarding policy</a>` : phInline("[Current arrangements for protecting children, vulnerable adults, volunteers and beneficiaries from harm, exploitation and abuse]")}</dd></div>
